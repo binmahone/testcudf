@@ -1,0 +1,17 @@
+/home/hongbin/code/testCUDF/build/CMakeFiles/coalesce_test.dir
+/home/hongbin/code/testCUDF/build/CMakeFiles/coalesce_strategy_test.dir
+/home/hongbin/code/testCUDF/build/CMakeFiles/split_copy_test.dir
+/home/hongbin/code/testCUDF/build/CMakeFiles/coalesce_comparison.dir
+/home/hongbin/code/testCUDF/build/CMakeFiles/memory_leak_test.dir
+/home/hongbin/code/testCUDF/build/CMakeFiles/rmm_pool_test.dir
+/home/hongbin/code/testCUDF/build/CMakeFiles/virtual_column_test.dir
+/home/hongbin/code/testCUDF/build/CMakeFiles/concat_optimization_test.dir
+/home/hongbin/code/testCUDF/build/CMakeFiles/conditional_coalesce_test.dir
+/home/hongbin/code/testCUDF/build/CMakeFiles/multithreaded_test.dir
+/home/hongbin/code/testCUDF/build/CMakeFiles/multithread_scalability.dir
+/home/hongbin/code/testCUDF/build/CMakeFiles/memory_requirement_test.dir
+/home/hongbin/code/testCUDF/build/CMakeFiles/optimized_impl_test.dir
+/home/hongbin/code/testCUDF/build/CMakeFiles/advanced_optimization_test.dir
+/home/hongbin/code/testCUDF/build/CMakeFiles/optimized_coalesce_cast_test.dir
+/home/hongbin/code/testCUDF/build/CMakeFiles/edit_cache.dir
+/home/hongbin/code/testCUDF/build/CMakeFiles/rebuild_cache.dir

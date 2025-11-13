@@ -1,0 +1,700 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Linux - 6.8.0-87-generic - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /home/hongbin/anaconda3/envs/cudf_test/bin/x86_64-conda-linux-gnu-g++ 
+      Build flags: -fvisibility-inlines-hidden;-fmessage-length=0;-march=nocona;-mtune=haswell;-ftree-vectorize;-fPIC;-fstack-protector-strong;-fno-plt;-O2;-ffunction-sections;-pipe;-isystem;/home/hongbin/anaconda3/envs/cudf_test/include
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/hongbin/code/testCUDF/build/CMakeFiles/3.31.5/CompilerIdCXX/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:1237 (message)"
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeDetermineCUDACompiler.cmake:75 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Checking whether the CUDA compiler is NVIDIA using "" matched "nvcc: NVIDIA \\(R\\) Cuda compiler driver":
+      nvcc: NVIDIA (R) Cuda compiler driver
+      Copyright (c) 2005-2023 NVIDIA Corporation
+      Built on Tue_Jun_13_19:16:58_PDT_2023
+      Cuda compilation tools, release 12.2, V12.2.91
+      Build cuda_12.2.r12.2/compiler.32965470_0
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:1237 (message)"
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeDetermineCUDACompiler.cmake:75 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Checking whether the CUDA compiler is NVIDIA using "" matched "nvcc: NVIDIA \\(R\\) Cuda compiler driver":
+      nvcc: NVIDIA (R) Cuda compiler driver
+      Copyright (c) 2005-2023 NVIDIA Corporation
+      Built on Tue_Jun_13_19:16:58_PDT_2023
+      Cuda compilation tools, release 12.2, V12.2.91
+      Build cuda_12.2.r12.2/compiler.32965470_0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:53 (__determine_compiler_id_test)"
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeDetermineCUDACompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" succeeded.
+      Compiler: /usr/local/cuda/bin/nvcc 
+      Build flags: 
+      Id flags: --keep;--keep-dir;tmp -v
+      
+      The output was:
+      0
+      #$ _NVVM_BRANCH_=nvvm
+      #$ _SPACE_= 
+      #$ _CUDART_=cudart
+      #$ _HERE_=/usr/local/cuda/bin
+      #$ _THERE_=/usr/local/cuda/bin
+      #$ _TARGET_SIZE_=
+      #$ _TARGET_DIR_=
+      #$ _TARGET_DIR_=targets/x86_64-linux
+      #$ TOP=/usr/local/cuda/bin/..
+      #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+      #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/usr/local/cuda-12.2/lib64
+      #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/usr/local/cuda/bin:/home/hongbin/develop/cmake-3.31.5-linux-x86_64/bin:/home/hongbin/develop/FlameGraph:/home/hongbin/.cursor-server/bin/9e7a27b76730ca7fe4aecaeafc58bac1e2c82120/bin/remote-cli:/home/hongbin/.nvm/versions/node/v22.17.0/bin:/usr/local/cuda/bin:/home/hongbin/develop/cmake-3.31.5-linux-x86_64/bin:/home/hongbin/.sdkman/candidates/scala/current/bin:/home/hongbin/anaconda3/envs/cudf_test/bin:/home/hongbin/anaconda3/condabin:/home/hongbin/develop/FlameGraph:/home/hongbin/.cursor-server/bin/9e7a27b76730ca7fe4aecaeafc58bac1e2c82120/bin/remote-cli:/home/hongbin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/hongbin/.local/share/JetBrains/Toolbox/scripts:/usr/local/go/bin:/home/hongbin/code/perf-map-agent/bin:/home/hongbin/develop/jemalloc-5.3.0/bin:/usr/local/go/bin:/home/hongbin/code/perf-map-agent/bin:/home/hongbin/develop/jemalloc-5.3.0/bin
+      #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+      #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+      #$ CUDAFE_FLAGS=
+      #$ PTXAS_FLAGS=
+      #$ rm tmp/a_dlink.reg.c
+      #$ gcc -D__CUDA_ARCH_LIST__=520 -E -x c++ -D__CUDACC__ -D__NVCC__  "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=91 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp4.ii" 
+      #$ cudafe++ --c++17 --gnu_version=120400 --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "/home/hongbin/code/testCUDF/build/CMakeFiles/3.31.5/CompilerIdCUDA/CMakeCUDACompilerId.cu" --allow_managed  --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" 
+      #$ gcc -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=91 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp1.ii" 
+      #$ cicc --c++17 --gnu_version=120400 --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "/home/hongbin/code/testCUDF/build/CMakeFiles/3.31.5/CompilerIdCUDA/CMakeCUDACompilerId.cu" --allow_managed   -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx"
+      #$ ptxas -arch=sm_52 -m64  "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_52.cubin" 
+      #$ fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " "--image3=kind=elf,sm=52,file=tmp/CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" 
+      #$ gcc -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"   -m64 "tmp/CMakeCUDACompilerId.cudafe1.cpp" -o "tmp/CMakeCUDACompilerId.o" 
+      #$ nvlink -m64 --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"    "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.o"  -lcudadevrt  -o "tmp/a_dlink.sm_52.cubin" --host-ccbin "gcc"
+      #$ fatbinary --create="tmp/a_dlink.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -link "--image3=kind=elf,sm=52,file=tmp/a_dlink.sm_52.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" 
+      #$ gcc -D__CUDA_ARCH_LIST__=520 -c -x c++ -DFATBINFILE="\\"tmp/a_dlink.fatbin.c\\"" -DREGISTERLINKBINARYFILE="\\"tmp/a_dlink.reg.c\\"" -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__  "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=91 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -m64 "/usr/local/cuda/bin/crt/link.stub" -o "tmp/a_dlink.o" 
+      #$ g++ -D__CUDA_ARCH_LIST__=520 -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" 
+      
+      
+      Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "a.out"
+      
+      The CUDA compiler identification is NVIDIA, found in:
+        /home/hongbin/code/testCUDF/build/CMakeFiles/3.31.5/CompilerIdCUDA/a.out
+      The host compiler identification is GNU
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/Internal/CMakeNVCCParseImplicitInfo.cmake:128 (message)"
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeDetermineCUDACompiler.cmake:242 (cmake_nvcc_parse_implicit_info)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CUDA nvcc implicit link information:
+        found 'PATH=' string: [/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/usr/local/cuda/bin:/home/hongbin/develop/cmake-3.31.5-linux-x86_64/bin:/home/hongbin/develop/FlameGraph:/home/hongbin/.cursor-server/bin/9e7a27b76730ca7fe4aecaeafc58bac1e2c82120/bin/remote-cli:/home/hongbin/.nvm/versions/node/v22.17.0/bin:/usr/local/cuda/bin:/home/hongbin/develop/cmake-3.31.5-linux-x86_64/bin:/home/hongbin/.sdkman/candidates/scala/current/bin:/home/hongbin/anaconda3/envs/cudf_test/bin:/home/hongbin/anaconda3/condabin:/home/hongbin/develop/FlameGraph:/home/hongbin/.cursor-server/bin/9e7a27b76730ca7fe4aecaeafc58bac1e2c82120/bin/remote-cli:/home/hongbin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/hongbin/.local/share/JetBrains/Toolbox/scripts:/usr/local/go/bin:/home/hongbin/code/perf-map-agent/bin:/home/hongbin/develop/jemalloc-5.3.0/bin:/usr/local/go/bin:/home/hongbin/code/perf-map-agent/bin:/home/hongbin/develop/jemalloc-5.3.0/bin]
+        found 'LIBRARIES=' string: ["-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"]
+        found 'INCLUDES=' string: ["-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  ]
+        considering line: [#$ rm tmp/a_dlink.reg.c]
+        considering line: [gcc -D__CUDA_ARCH_LIST__=520 -E -x c++ -D__CUDACC__ -D__NVCC__  "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=91 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [cudafe++ --c++17 --gnu_version=120400 --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "/home/hongbin/code/testCUDF/build/CMakeFiles/3.31.5/CompilerIdCUDA/CMakeCUDACompilerId.cu" --allow_managed  --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [gcc -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=91 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp1.ii" ]
+        considering line: [cicc --c++17 --gnu_version=120400 --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "/home/hongbin/code/testCUDF/build/CMakeFiles/3.31.5/CompilerIdCUDA/CMakeCUDACompilerId.cu" --allow_managed   -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx"]
+        considering line: [ptxas -arch=sm_52 -m64  "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_52.cubin" ]
+        considering line: [fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " "--image3=kind=elf,sm=52,file=tmp/CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" ]
+        considering line: [gcc -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"   -m64 "tmp/CMakeCUDACompilerId.cudafe1.cpp" -o "tmp/CMakeCUDACompilerId.o" ]
+        considering line: [nvlink -m64 --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"    "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.o"  -lcudadevrt  -o "tmp/a_dlink.sm_52.cubin" --host-ccbin "gcc"]
+          ignoring nvlink line
+        considering line: [fatbinary --create="tmp/a_dlink.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -link "--image3=kind=elf,sm=52,file=tmp/a_dlink.sm_52.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" ]
+        considering line: [gcc -D__CUDA_ARCH_LIST__=520 -c -x c++ -DFATBINFILE="\\"tmp/a_dlink.fatbin.c\\"" -DREGISTERLINKBINARYFILE="\\"tmp/a_dlink.reg.c\\"" -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__  "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=91 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -m64 "/usr/local/cuda/bin/crt/link.stub" -o "tmp/a_dlink.o" ]
+        considering line: [g++ -D__CUDA_ARCH_LIST__=520 -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+          extracted link line: [g++ -D__CUDA_ARCH_LIST__=520 -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+        considering line: []
+        extracted link launcher name: [g++]
+        found link launcher absolute path: [/home/hongbin/anaconda3/envs/cudf_test/bin/g++]
+      
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        link line: [cuda-fake-ld g++ -D__CUDA_ARCH_LIST__=520 -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+          arg [cuda-fake-ld] ==> ignore
+          arg [g++] ==> ignore
+          arg [-D__CUDA_ARCH_LIST__=520] ==> ignore
+          arg [-m64] ==> ignore
+          arg [-Wl,--start-group] ==> ignore
+          arg [tmp/a_dlink.o] ==> ignore
+          arg [tmp/CMakeCUDACompilerId.o] ==> ignore
+          arg [-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs] ==> dir [/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs]
+          arg [-L/usr/local/cuda/bin/../targets/x86_64-linux/lib] ==> dir [/usr/local/cuda/bin/../targets/x86_64-linux/lib]
+          arg [-lcudadevrt] ==> lib [cudadevrt]
+          arg [-lcudart_static] ==> lib [cudart_static]
+          arg [-lrt] ==> lib [rt]
+          arg [-lpthread] ==> lib [pthread]
+          arg [-ldl] ==> lib [dl]
+          arg [-Wl,--end-group] ==> ignore
+          arg [-o] ==> ignore
+          arg [a.out] ==> ignore
+        collapse library dir [/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs] ==> [/usr/local/cuda/targets/x86_64-linux/lib/stubs]
+        collapse library dir [/usr/local/cuda/bin/../targets/x86_64-linux/lib] ==> [/usr/local/cuda/targets/x86_64-linux/lib]
+        implicit libs: [cudadevrt;cudart_static;rt;pthread;dl]
+        implicit objs: []
+        implicit dirs: [/usr/local/cuda/targets/x86_64-linux/lib/stubs;/usr/local/cuda/targets/x86_64-linux/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/Internal/CMakeNVCCParseImplicitInfo.cmake:146 (message)"
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeDetermineCUDACompiler.cmake:242 (cmake_nvcc_parse_implicit_info)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CUDA nvcc include information:
+        found 'PATH=' string: [/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/usr/local/cuda/bin:/home/hongbin/develop/cmake-3.31.5-linux-x86_64/bin:/home/hongbin/develop/FlameGraph:/home/hongbin/.cursor-server/bin/9e7a27b76730ca7fe4aecaeafc58bac1e2c82120/bin/remote-cli:/home/hongbin/.nvm/versions/node/v22.17.0/bin:/usr/local/cuda/bin:/home/hongbin/develop/cmake-3.31.5-linux-x86_64/bin:/home/hongbin/.sdkman/candidates/scala/current/bin:/home/hongbin/anaconda3/envs/cudf_test/bin:/home/hongbin/anaconda3/condabin:/home/hongbin/develop/FlameGraph:/home/hongbin/.cursor-server/bin/9e7a27b76730ca7fe4aecaeafc58bac1e2c82120/bin/remote-cli:/home/hongbin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/hongbin/.local/share/JetBrains/Toolbox/scripts:/usr/local/go/bin:/home/hongbin/code/perf-map-agent/bin:/home/hongbin/develop/jemalloc-5.3.0/bin:/usr/local/go/bin:/home/hongbin/code/perf-map-agent/bin:/home/hongbin/develop/jemalloc-5.3.0/bin]
+        found 'LIBRARIES=' string: ["-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"]
+        found 'INCLUDES=' string: ["-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  ]
+        considering line: [#$ rm tmp/a_dlink.reg.c]
+        considering line: [gcc -D__CUDA_ARCH_LIST__=520 -E -x c++ -D__CUDACC__ -D__NVCC__  "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=91 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [cudafe++ --c++17 --gnu_version=120400 --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "/home/hongbin/code/testCUDF/build/CMakeFiles/3.31.5/CompilerIdCUDA/CMakeCUDACompilerId.cu" --allow_managed  --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [gcc -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=91 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp1.ii" ]
+        considering line: [cicc --c++17 --gnu_version=120400 --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "/home/hongbin/code/testCUDF/build/CMakeFiles/3.31.5/CompilerIdCUDA/CMakeCUDACompilerId.cu" --allow_managed   -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx"]
+        considering line: [ptxas -arch=sm_52 -m64  "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_52.cubin" ]
+        considering line: [fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " "--image3=kind=elf,sm=52,file=tmp/CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" ]
+        considering line: [gcc -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"   -m64 "tmp/CMakeCUDACompilerId.cudafe1.cpp" -o "tmp/CMakeCUDACompilerId.o" ]
+        considering line: [nvlink -m64 --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"    "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.o"  -lcudadevrt  -o "tmp/a_dlink.sm_52.cubin" --host-ccbin "gcc"]
+          ignoring nvlink line
+        considering line: [fatbinary --create="tmp/a_dlink.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -link "--image3=kind=elf,sm=52,file=tmp/a_dlink.sm_52.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" ]
+        considering line: [gcc -D__CUDA_ARCH_LIST__=520 -c -x c++ -DFATBINFILE="\\"tmp/a_dlink.fatbin.c\\"" -DREGISTERLINKBINARYFILE="\\"tmp/a_dlink.reg.c\\"" -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__  "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=91 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -m64 "/usr/local/cuda/bin/crt/link.stub" -o "tmp/a_dlink.o" ]
+        considering line: [g++ -D__CUDA_ARCH_LIST__=520 -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+          extracted link line: [g++ -D__CUDA_ARCH_LIST__=520 -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+        considering line: []
+        extracted link launcher name: [g++]
+        found link launcher absolute path: [/home/hongbin/anaconda3/envs/cudf_test/bin/g++]
+      
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        link line: [cuda-fake-ld g++ -D__CUDA_ARCH_LIST__=520 -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+          arg [cuda-fake-ld] ==> ignore
+          arg [g++] ==> ignore
+          arg [-D__CUDA_ARCH_LIST__=520] ==> ignore
+          arg [-m64] ==> ignore
+          arg [-Wl,--start-group] ==> ignore
+          arg [tmp/a_dlink.o] ==> ignore
+          arg [tmp/CMakeCUDACompilerId.o] ==> ignore
+          arg [-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs] ==> dir [/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs]
+          arg [-L/usr/local/cuda/bin/../targets/x86_64-linux/lib] ==> dir [/usr/local/cuda/bin/../targets/x86_64-linux/lib]
+          arg [-lcudadevrt] ==> lib [cudadevrt]
+          arg [-lcudart_static] ==> lib [cudart_static]
+          arg [-lrt] ==> lib [rt]
+          arg [-lpthread] ==> lib [pthread]
+          arg [-ldl] ==> lib [dl]
+          arg [-Wl,--end-group] ==> ignore
+          arg [-o] ==> ignore
+          arg [a.out] ==> ignore
+        collapse library dir [/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs] ==> [/usr/local/cuda/targets/x86_64-linux/lib/stubs]
+        collapse library dir [/usr/local/cuda/bin/../targets/x86_64-linux/lib] ==> [/usr/local/cuda/targets/x86_64-linux/lib]
+        implicit libs: [cudadevrt;cudart_static;rt;pthread;dl]
+        implicit objs: []
+        implicit dirs: [/usr/local/cuda/targets/x86_64-linux/lib/stubs;/usr/local/cuda/targets/x86_64-linux/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CUDA compiler ABI info"
+    directories:
+      source: "/home/hongbin/code/testCUDF/build/CMakeFiles/CMakeScratch/TryCompile-WP0PqK"
+      binary: "/home/hongbin/code/testCUDF/build/CMakeFiles/CMakeScratch/TryCompile-WP0PqK"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CUDA_FLAGS: ""
+      CMAKE_CUDA_FLAGS_DEBUG: "-g"
+      CMAKE_CUDA_RUNTIME_LIBRARY: "Static"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/home/hongbin/anaconda3/envs/cudf_test/lib -Wl,-rpath-link,/home/hongbin/anaconda3/envs/cudf_test/lib -L/home/hongbin/anaconda3/envs/cudf_test/lib"
+    buildResult:
+      variable: "CMAKE_CUDA_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/hongbin/code/testCUDF/build/CMakeFiles/CMakeScratch/TryCompile-WP0PqK'
+        
+        Run Build Command(s): /home/hongbin/develop/cmake-3.31.5-linux-x86_64/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_951b1/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_951b1.dir/build.make CMakeFiles/cmTC_951b1.dir/build
+        gmake[1]: Entering directory '/home/hongbin/code/testCUDF/build/CMakeFiles/CMakeScratch/TryCompile-WP0PqK'
+        Building CUDA object CMakeFiles/cmTC_951b1.dir/CMakeCUDACompilerABI.cu.o
+        /usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler   "--generate-code=arch=compute_52,code=[compute_52,sm_52]"   -Xcompiler=-v -MD -MT CMakeFiles/cmTC_951b1.dir/CMakeCUDACompilerABI.cu.o -MF CMakeFiles/cmTC_951b1.dir/CMakeCUDACompilerABI.cu.o.d -x cu -c /home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeCUDACompilerABI.cu -o CMakeFiles/cmTC_951b1.dir/CMakeCUDACompilerABI.cu.o
+        Reading specs from /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/specs
+        Reading specs from /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/conda.specs
+        COLLECT_GCC=gcc
+        Target: x86_64-conda-linux-gnu
+        Configured with: ../configure --prefix=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho --with-slibdir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib --libdir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib --mandir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/man --build=x86_64-conda-linux-gnu --host=x86_64-conda-linux-gnu --target=x86_64-conda-linux-gnu --enable-languages=c,c++,fortran,objc,obj-c++ --enable-__cxa_atexit --disable-libmudflap --enable-libgomp --disable-libssp --enable-libquadmath --enable-libquadmath-support --enable-lto --enable-target-optspace --enable-plugin --enable-gold --disable-nls --disable-bootstrap --disable-multilib --enable-long-long --with-sysroot=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/x86_64-conda-linux-gnu/sysroot --with-build-sysroot=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/work/cf-compilers/x86_64-conda-linux-gnu/sysroot --with-native-system-header-dir=/usr/include --with-gxx-include-dir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++ --with-pkgversion='conda-forge gcc 12.4.0-2' --with-bugurl=https://github.com/conda-forge/ctng-compilers-feedstock/issues/new/choose --enable-libsanitizer --enable-default-pie --enable-threads=posix
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 12.4.0 (conda-forge gcc 12.4.0-2) 
+        COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-E' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/usr/local/cuda/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=2' '-D' '__CUDACC_VER_BUILD__=91' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=2' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_0027399e_00000000-7_CMakeCUDACompilerABI.cpp1.ii' '-mtune=generic' '-march=x86-64' '-dumpdir' '/tmp/'
+         /home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/cc1plus -E -quiet -v -I /usr/local/cuda/bin/../targets/x86_64-linux/include -iprefix /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/ -isysroot /home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot -D_GNU_SOURCE -D __CUDA_ARCH__=520 -D __CUDA_ARCH_LIST__=520 -D CUDA_DOUBLE_MATH_FUNCTIONS -D __CUDACC__ -D __NVCC__ -D __CUDACC_VER_MAJOR__=12 -D __CUDACC_VER_MINOR__=2 -D __CUDACC_VER_BUILD__=91 -D __CUDA_API_VER_MAJOR__=12 -D __CUDA_API_VER_MINOR__=2 -D __NVCC_DIAG_PRAGMA_SUPPORT__=1 -include cuda_runtime.h /home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeCUDACompilerABI.cu -o /tmp/tmpxft_0027399e_00000000-7_CMakeCUDACompilerABI.cpp1.ii -m64 -mtune=generic -march=x86-64 -idirafter /home/hongbin/anaconda3/envs/cudf_test/include -dumpdir /tmp/ -dumpbase tmpxft_0027399e_00000000-7_CMakeCUDACompilerABI.cpp1.cu -dumpbase-ext .cu
+        ignoring nonexistent directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/include"
+        ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++"
+        ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/x86_64-conda-linux-gnu"
+        ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/backward"
+        ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include"
+        ignoring nonexistent directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/local/include"
+        ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include-fixed"
+        ignoring nonexistent directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/local/cuda/bin/../targets/x86_64-linux/include
+         /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++
+         /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/x86_64-conda-linux-gnu
+         /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/backward
+         /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include
+         /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include-fixed
+         /home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/include
+         /home/hongbin/anaconda3/envs/cudf_test/include
+        End of search list.
+        COMPILER_PATH=/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/:/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/bin/
+        LIBRARY_PATH=/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib/../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib/../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/
+        COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-E' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/usr/local/cuda/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=2' '-D' '__CUDACC_VER_BUILD__=91' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=2' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_0027399e_00000000-7_CMakeCUDACompilerABI.cpp1.ii' '-mtune=generic' '-march=x86-64' '-dumpdir' '/tmp/tmpxft_0027399e_00000000-7_CMakeCUDACompilerABI.cpp1.'
+        Reading specs from /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/specs
+        Reading specs from /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/conda.specs
+        COLLECT_GCC=gcc
+        Target: x86_64-conda-linux-gnu
+        Configured with: ../configure --prefix=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho --with-slibdir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib --libdir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib --mandir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/man --build=x86_64-conda-linux-gnu --host=x86_64-conda-linux-gnu --target=x86_64-conda-linux-gnu --enable-languages=c,c++,fortran,objc,obj-c++ --enable-__cxa_atexit --disable-libmudflap --enable-libgomp --disable-libssp --enable-libquadmath --enable-libquadmath-support --enable-lto --enable-target-optspace --enable-plugin --enable-gold --disable-nls --disable-bootstrap --disable-multilib --enable-long-long --with-sysroot=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/x86_64-conda-linux-gnu/sysroot --with-build-sysroot=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/work/cf-compilers/x86_64-conda-linux-gnu/sysroot --with-native-system-header-dir=/usr/include --with-gxx-include-dir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++ --with-pkgversion='conda-forge gcc 12.4.0-2' --with-bugurl=https://github.com/conda-forge/ctng-compilers-feedstock/issues/new/choose --enable-libsanitizer --enable-default-pie --enable-threads=posix
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 12.4.0 (conda-forge gcc 12.4.0-2) 
+        COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH_LIST__=520' '-E' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/usr/local/cuda/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=2' '-D' '__CUDACC_VER_BUILD__=91' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=2' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_0027399e_00000000-5_CMakeCUDACompilerABI.cpp4.ii' '-mtune=generic' '-march=x86-64' '-dumpdir' '/tmp/'
+         /home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/cc1plus -E -quiet -v -I /usr/local/cuda/bin/../targets/x86_64-linux/include -iprefix /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/ -isysroot /home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot -D_GNU_SOURCE -D __CUDA_ARCH_LIST__=520 -D __CUDACC__ -D __NVCC__ -D __CUDACC_VER_MAJOR__=12 -D __CUDACC_VER_MINOR__=2 -D __CUDACC_VER_BUILD__=91 -D __CUDA_API_VER_MAJOR__=12 -D __CUDA_API_VER_MINOR__=2 -D __NVCC_DIAG_PRAGMA_SUPPORT__=1 -include cuda_runtime.h /home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeCUDACompilerABI.cu -o /tmp/tmpxft_0027399e_00000000-5_CMakeCUDACompilerABI.cpp4.ii -m64 -mtune=generic -march=x86-64 -idirafter /home/hongbin/anaconda3/envs/cudf_test/include -dumpdir /tmp/ -dumpbase tmpxft_0027399e_00000000-5_CMakeCUDACompilerABI.cpp4.cu -dumpbase-ext .cu
+        ignoring nonexistent directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/include"
+        ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++"
+        ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/x86_64-conda-linux-gnu"
+        ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/backward"
+        ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include"
+        ignoring nonexistent directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/local/include"
+        ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include-fixed"
+        ignoring nonexistent directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/local/cuda/bin/../targets/x86_64-linux/include
+         /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++
+         /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/x86_64-conda-linux-gnu
+         /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/backward
+         /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include
+         /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include-fixed
+         /home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/include
+         /home/hongbin/anaconda3/envs/cudf_test/include
+        End of search list.
+        COMPILER_PATH=/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/:/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/bin/
+        LIBRARY_PATH=/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib/../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib/../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/
+        COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH_LIST__=520' '-E' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/usr/local/cuda/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=2' '-D' '__CUDACC_VER_BUILD__=91' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=2' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_0027399e_00000000-5_CMakeCUDACompilerABI.cpp4.ii' '-mtune=generic' '-march=x86-64' '-dumpdir' '/tmp/tmpxft_0027399e_00000000-5_CMakeCUDACompilerABI.cpp4.'
+        Reading specs from /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/specs
+        Reading specs from /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/conda.specs
+        COLLECT_GCC=gcc
+        Target: x86_64-conda-linux-gnu
+        Configured with: ../configure --prefix=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho --with-slibdir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib --libdir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib --mandir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/man --build=x86_64-conda-linux-gnu --host=x86_64-conda-linux-gnu --target=x86_64-conda-linux-gnu --enable-languages=c,c++,fortran,objc,obj-c++ --enable-__cxa_atexit --disable-libmudflap --enable-libgomp --disable-libssp --enable-libquadmath --enable-libquadmath-support --enable-lto --enable-target-optspace --enable-plugin --enable-gold --disable-nls --disable-bootstrap --disable-multilib --enable-long-long --with-sysroot=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/x86_64-conda-linux-gnu/sysroot --with-build-sysroot=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/work/cf-compilers/x86_64-conda-linux-gnu/sysroot --with-native-system-header-dir=/usr/include --with-gxx-include-dir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++ --with-pkgversion='conda-forge gcc 12.4.0-2' --with-bugurl=https://github.com/conda-forge/ctng-compilers-feedstock/issues/new/choose --enable-libsanitizer --enable-default-pie --enable-threads=posix
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 12.4.0 (conda-forge gcc 12.4.0-2) 
+        COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/usr/local/cuda/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_951b1.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_951b1.dir/'
+         /home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/cc1plus -quiet -v -I /usr/local/cuda/bin/../targets/x86_64-linux/include -iprefix /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/ -isysroot /home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot -D_GNU_SOURCE -D __CUDA_ARCH__=520 -D __CUDA_ARCH_LIST__=520 -D CUDA_DOUBLE_MATH_FUNCTIONS /tmp/tmpxft_0027399e_00000000-6_CMakeCUDACompilerABI.cudafe1.cpp -quiet -dumpdir CMakeFiles/cmTC_951b1.dir/ -dumpbase CMakeCUDACompilerABI.cu.cpp -dumpbase-ext .cpp -m64 -mtune=generic -march=x86-64 -version -idirafter /home/hongbin/anaconda3/envs/cudf_test/include -o /tmp/ccRvgmpm.s
+        GNU C++17 (conda-forge gcc 12.4.0-2) version 12.4.0 (x86_64-conda-linux-gnu)
+        	compiled by GNU C version 14.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/include"
+        ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++"
+        ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/x86_64-conda-linux-gnu"
+        ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/backward"
+        ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include"
+        ignoring nonexistent directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/local/include"
+        ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include-fixed"
+        ignoring nonexistent directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/local/cuda/bin/../targets/x86_64-linux/include
+         /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++
+         /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/x86_64-conda-linux-gnu
+         /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/backward
+         /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include
+         /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include-fixed
+         /home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/include
+         /home/hongbin/anaconda3/envs/cudf_test/include
+        End of search list.
+        GNU C++17 (conda-forge gcc 12.4.0-2) version 12.4.0 (x86_64-conda-linux-gnu)
+        	compiled by GNU C version 14.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: f31f47052c9fa5fea1ea8ad81798a5ce
+        COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/usr/local/cuda/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_951b1.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_951b1.dir/'
+         /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/bin/as -v -I /usr/local/cuda/bin/../targets/x86_64-linux/include --64 -o CMakeFiles/cmTC_951b1.dir/CMakeCUDACompilerABI.cu.o /tmp/ccRvgmpm.s
+        GNU assembler version 2.44 (x86_64-conda-linux-gnu) using BFD version (GNU Binutils) 2.44
+        COMPILER_PATH=/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/:/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/bin/
+        LIBRARY_PATH=/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib/../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib/../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/
+        COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/usr/local/cuda/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_951b1.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_951b1.dir/CMakeCUDACompilerABI.cu.'
+        Linking CUDA executable cmTC_951b1
+        /home/hongbin/develop/cmake-3.31.5-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_951b1.dir/link.txt --verbose=1
+        Reading specs from /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/specs
+        Reading specs from /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/conda.specs
+        COLLECT_GCC=/home/hongbin/anaconda3/envs/cudf_test/bin/g++
+        COLLECT_LTO_WRAPPER=/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/lto-wrapper
+        Target: x86_64-conda-linux-gnu
+        Configured with: ../configure --prefix=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho --with-slibdir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib --libdir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib --mandir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/man --build=x86_64-conda-linux-gnu --host=x86_64-conda-linux-gnu --target=x86_64-conda-linux-gnu --enable-languages=c,c++,fortran,objc,obj-c++ --enable-__cxa_atexit --disable-libmudflap --enable-libgomp --disable-libssp --enable-libquadmath --enable-libquadmath-support --enable-lto --enable-target-optspace --enable-plugin --enable-gold --disable-nls --disable-bootstrap --disable-multilib --enable-long-long --with-sysroot=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/x86_64-conda-linux-gnu/sysroot --with-build-sysroot=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/work/cf-compilers/x86_64-conda-linux-gnu/sysroot --with-native-system-header-dir=/usr/include --with-gxx-include-dir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++ --with-pkgversion='conda-forge gcc 12.4.0-2' --with-bugurl=https://github.com/conda-forge/ctng-compilers-feedstock/issues/new/choose --enable-libsanitizer --enable-default-pie --enable-threads=posix
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 12.4.0 (conda-forge gcc 12.4.0-2) 
+        COMPILER_PATH=/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/:/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/bin/
+        LIBRARY_PATH=/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib/../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib/../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/
+        COLLECT_GCC_OPTIONS='-L/home/hongbin/anaconda3/envs/cudf_test/lib' '-v' '-o' 'cmTC_951b1' '-L/usr/local/cuda/targets/x86_64-linux/lib/stubs' '-L/usr/local/cuda/targets/x86_64-linux/lib' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_951b1.'
+         /home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/collect2 -disable-new-dtags -plugin /home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/liblto_plugin.so -plugin-opt=/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cctfRjbF.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_951b1 /home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/Scrt1.o /home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/crti.o /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/crtbeginS.o -L/home/hongbin/anaconda3/envs/cudf_test/lib -L/usr/local/cuda/targets/x86_64-linux/lib/stubs -L/usr/local/cuda/targets/x86_64-linux/lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0 -L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc -L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib/../lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib/../lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../.. -L/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib -O2 --sort-common --as-needed -z relro -z now --disable-new-dtags --gc-sections --allow-shlib-undefined -rpath /home/hongbin/anaconda3/envs/cudf_test/lib -rpath-link /home/hongbin/anaconda3/envs/cudf_test/lib -v CMakeFiles/cmTC_951b1.dir/CMakeCUDACompilerABI.cu.o -lcudadevrt -lcudart_static -lrt -lpthread -ldl -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/crtendS.o /home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/crtn.o -rpath /home/hongbin/anaconda3/envs/cudf_test/lib -rpath-link /home/hongbin/anaconda3/envs/cudf_test/lib -L /home/hongbin/anaconda3/envs/cudf_test/lib/stubs -L /home/hongbin/anaconda3/envs/cudf_test/lib
+        collect2 version 12.4.0
+        /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/bin/ld -disable-new-dtags -plugin /home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/liblto_plugin.so -plugin-opt=/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cctfRjbF.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_951b1 /home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/Scrt1.o /home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/crti.o /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/crtbeginS.o -L/home/hongbin/anaconda3/envs/cudf_test/lib -L/usr/local/cuda/targets/x86_64-linux/lib/stubs -L/usr/local/cuda/targets/x86_64-linux/lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0 -L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc -L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib/../lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib/../lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../.. -L/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib -O2 --sort-common --as-needed -z relro -z now --disable-new-dtags --gc-sections --allow-shlib-undefined -rpath /home/hongbin/anaconda3/envs/cudf_test/lib -rpath-link /home/hongbin/anaconda3/envs/cudf_test/lib -v CMakeFiles/cmTC_951b1.dir/CMakeCUDACompilerABI.cu.o -lcudadevrt -lcudart_static -lrt -lpthread -ldl -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/crtendS.o /home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/crtn.o -rpath /home/hongbin/anaconda3/envs/cudf_test/lib -rpath-link /home/hongbin/anaconda3/envs/cudf_test/lib -L /home/hongbin/anaconda3/envs/cudf_test/lib/stubs -L /home/hongbin/anaconda3/envs/cudf_test/lib
+        GNU ld (GNU Binutils) 2.44
+        COLLECT_GCC_OPTIONS='-L/home/hongbin/anaconda3/envs/cudf_test/lib' '-v' '-o' 'cmTC_951b1' '-L/usr/local/cuda/targets/x86_64-linux/lib/stubs' '-L/usr/local/cuda/targets/x86_64-linux/lib' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_951b1.'
+        /home/hongbin/anaconda3/envs/cudf_test/bin/g++ -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/home/hongbin/anaconda3/envs/cudf_test/lib -Wl,-rpath-link,/home/hongbin/anaconda3/envs/cudf_test/lib -L/home/hongbin/anaconda3/envs/cudf_test/lib -v -Wl,-v CMakeFiles/cmTC_951b1.dir/CMakeCUDACompilerABI.cu.o -o cmTC_951b1  -lcudadevrt -lcudart_static -lrt -lpthread -ldl  -L"/usr/local/cuda/targets/x86_64-linux/lib/stubs" -L"/usr/local/cuda/targets/x86_64-linux/lib"
+        gmake[1]: Leaving directory '/home/hongbin/code/testCUDF/build/CMakeFiles/CMakeScratch/TryCompile-WP0PqK'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CUDA implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/local/cuda/bin/../targets/x86_64-linux/include]
+          add: [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++]
+          add: [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/x86_64-conda-linux-gnu]
+          add: [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/backward]
+          add: [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include]
+          add: [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include-fixed]
+          add: [/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/include]
+          add: [/home/hongbin/anaconda3/envs/cudf_test/include]
+        end of search list found
+        collapse include dir [/usr/local/cuda/bin/../targets/x86_64-linux/include] ==> [/usr/local/cuda/targets/x86_64-linux/include]
+        collapse include dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++] ==> [/home/hongbin/anaconda3/envs/cudf_test/lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++]
+        collapse include dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/x86_64-conda-linux-gnu] ==> [/home/hongbin/anaconda3/envs/cudf_test/lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/x86_64-conda-linux-gnu]
+        collapse include dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/backward] ==> [/home/hongbin/anaconda3/envs/cudf_test/lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/backward]
+        collapse include dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include] ==> [/home/hongbin/anaconda3/envs/cudf_test/lib/gcc/x86_64-conda-linux-gnu/12.4.0/include]
+        collapse include dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include-fixed] ==> [/home/hongbin/anaconda3/envs/cudf_test/lib/gcc/x86_64-conda-linux-gnu/12.4.0/include-fixed]
+        collapse include dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/include] ==> [/home/hongbin/anaconda3/envs/cudf_test/x86_64-conda-linux-gnu/sysroot/usr/include]
+        collapse include dir [/home/hongbin/anaconda3/envs/cudf_test/include] ==> [/home/hongbin/anaconda3/envs/cudf_test/include]
+        implicit include dirs: [/usr/local/cuda/targets/x86_64-linux/include;/home/hongbin/anaconda3/envs/cudf_test/lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++;/home/hongbin/anaconda3/envs/cudf_test/lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/x86_64-conda-linux-gnu;/home/hongbin/anaconda3/envs/cudf_test/lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/backward;/home/hongbin/anaconda3/envs/cudf_test/lib/gcc/x86_64-conda-linux-gnu/12.4.0/include;/home/hongbin/anaconda3/envs/cudf_test/lib/gcc/x86_64-conda-linux-gnu/12.4.0/include-fixed;/home/hongbin/anaconda3/envs/cudf_test/x86_64-conda-linux-gnu/sysroot/usr/include;/home/hongbin/anaconda3/envs/cudf_test/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CUDA implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/home/hongbin/code/testCUDF/build/CMakeFiles/CMakeScratch/TryCompile-WP0PqK']
+        ignore line: []
+        ignore line: [Run Build Command(s): /home/hongbin/develop/cmake-3.31.5-linux-x86_64/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_951b1/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_951b1.dir/build.make CMakeFiles/cmTC_951b1.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/hongbin/code/testCUDF/build/CMakeFiles/CMakeScratch/TryCompile-WP0PqK']
+        ignore line: [Building CUDA object CMakeFiles/cmTC_951b1.dir/CMakeCUDACompilerABI.cu.o]
+        ignore line: [/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler   "--generate-code=arch=compute_52 code=[compute_52 sm_52]"   -Xcompiler=-v -MD -MT CMakeFiles/cmTC_951b1.dir/CMakeCUDACompilerABI.cu.o -MF CMakeFiles/cmTC_951b1.dir/CMakeCUDACompilerABI.cu.o.d -x cu -c /home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeCUDACompilerABI.cu -o CMakeFiles/cmTC_951b1.dir/CMakeCUDACompilerABI.cu.o]
+        ignore line: [Reading specs from /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/specs]
+        ignore line: [Reading specs from /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/conda.specs]
+        ignore line: [COLLECT_GCC=gcc]
+        ignore line: [Target: x86_64-conda-linux-gnu]
+        ignore line: [Configured with: ../configure --prefix=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho --with-slibdir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib --libdir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib --mandir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/man --build=x86_64-conda-linux-gnu --host=x86_64-conda-linux-gnu --target=x86_64-conda-linux-gnu --enable-languages=c c++ fortran objc obj-c++ --enable-__cxa_atexit --disable-libmudflap --enable-libgomp --disable-libssp --enable-libquadmath --enable-libquadmath-support --enable-lto --enable-target-optspace --enable-plugin --enable-gold --disable-nls --disable-bootstrap --disable-multilib --enable-long-long --with-sysroot=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/x86_64-conda-linux-gnu/sysroot --with-build-sysroot=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/work/cf-compilers/x86_64-conda-linux-gnu/sysroot --with-native-system-header-dir=/usr/include --with-gxx-include-dir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++ --with-pkgversion='conda-forge gcc 12.4.0-2' --with-bugurl=https://github.com/conda-forge/ctng-compilers-feedstock/issues/new/choose --enable-libsanitizer --enable-default-pie --enable-threads=posix]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 12.4.0 (conda-forge gcc 12.4.0-2) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-E' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/usr/local/cuda/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=2' '-D' '__CUDACC_VER_BUILD__=91' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=2' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_0027399e_00000000-7_CMakeCUDACompilerABI.cpp1.ii' '-mtune=generic' '-march=x86-64' '-dumpdir' '/tmp/']
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/cc1plus -E -quiet -v -I /usr/local/cuda/bin/../targets/x86_64-linux/include -iprefix /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/ -isysroot /home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot -D_GNU_SOURCE -D __CUDA_ARCH__=520 -D __CUDA_ARCH_LIST__=520 -D CUDA_DOUBLE_MATH_FUNCTIONS -D __CUDACC__ -D __NVCC__ -D __CUDACC_VER_MAJOR__=12 -D __CUDACC_VER_MINOR__=2 -D __CUDACC_VER_BUILD__=91 -D __CUDA_API_VER_MAJOR__=12 -D __CUDA_API_VER_MINOR__=2 -D __NVCC_DIAG_PRAGMA_SUPPORT__=1 -include cuda_runtime.h /home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeCUDACompilerABI.cu -o /tmp/tmpxft_0027399e_00000000-7_CMakeCUDACompilerABI.cpp1.ii -m64 -mtune=generic -march=x86-64 -idirafter /home/hongbin/anaconda3/envs/cudf_test/include -dumpdir /tmp/ -dumpbase tmpxft_0027399e_00000000-7_CMakeCUDACompilerABI.cpp1.cu -dumpbase-ext .cu]
+        ignore line: [ignoring nonexistent directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/include"]
+        ignore line: [ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++"]
+        ignore line: [ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/x86_64-conda-linux-gnu"]
+        ignore line: [ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/backward"]
+        ignore line: [ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include"]
+        ignore line: [ignoring nonexistent directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/local/cuda/bin/../targets/x86_64-linux/include]
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++]
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/x86_64-conda-linux-gnu]
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/backward]
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include]
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include-fixed]
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/include]
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/include]
+        ignore line: [End of search list.]
+        ignore line: [COMPILER_PATH=/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/:/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/bin/]
+        ignore line: [LIBRARY_PATH=/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib/../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib/../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-E' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/usr/local/cuda/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=2' '-D' '__CUDACC_VER_BUILD__=91' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=2' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_0027399e_00000000-7_CMakeCUDACompilerABI.cpp1.ii' '-mtune=generic' '-march=x86-64' '-dumpdir' '/tmp/tmpxft_0027399e_00000000-7_CMakeCUDACompilerABI.cpp1.']
+        ignore line: [Reading specs from /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/specs]
+        ignore line: [Reading specs from /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/conda.specs]
+        ignore line: [COLLECT_GCC=gcc]
+        ignore line: [Target: x86_64-conda-linux-gnu]
+        ignore line: [Configured with: ../configure --prefix=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho --with-slibdir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib --libdir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib --mandir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/man --build=x86_64-conda-linux-gnu --host=x86_64-conda-linux-gnu --target=x86_64-conda-linux-gnu --enable-languages=c c++ fortran objc obj-c++ --enable-__cxa_atexit --disable-libmudflap --enable-libgomp --disable-libssp --enable-libquadmath --enable-libquadmath-support --enable-lto --enable-target-optspace --enable-plugin --enable-gold --disable-nls --disable-bootstrap --disable-multilib --enable-long-long --with-sysroot=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/x86_64-conda-linux-gnu/sysroot --with-build-sysroot=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/work/cf-compilers/x86_64-conda-linux-gnu/sysroot --with-native-system-header-dir=/usr/include --with-gxx-include-dir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++ --with-pkgversion='conda-forge gcc 12.4.0-2' --with-bugurl=https://github.com/conda-forge/ctng-compilers-feedstock/issues/new/choose --enable-libsanitizer --enable-default-pie --enable-threads=posix]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 12.4.0 (conda-forge gcc 12.4.0-2) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH_LIST__=520' '-E' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/usr/local/cuda/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=2' '-D' '__CUDACC_VER_BUILD__=91' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=2' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_0027399e_00000000-5_CMakeCUDACompilerABI.cpp4.ii' '-mtune=generic' '-march=x86-64' '-dumpdir' '/tmp/']
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/cc1plus -E -quiet -v -I /usr/local/cuda/bin/../targets/x86_64-linux/include -iprefix /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/ -isysroot /home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot -D_GNU_SOURCE -D __CUDA_ARCH_LIST__=520 -D __CUDACC__ -D __NVCC__ -D __CUDACC_VER_MAJOR__=12 -D __CUDACC_VER_MINOR__=2 -D __CUDACC_VER_BUILD__=91 -D __CUDA_API_VER_MAJOR__=12 -D __CUDA_API_VER_MINOR__=2 -D __NVCC_DIAG_PRAGMA_SUPPORT__=1 -include cuda_runtime.h /home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeCUDACompilerABI.cu -o /tmp/tmpxft_0027399e_00000000-5_CMakeCUDACompilerABI.cpp4.ii -m64 -mtune=generic -march=x86-64 -idirafter /home/hongbin/anaconda3/envs/cudf_test/include -dumpdir /tmp/ -dumpbase tmpxft_0027399e_00000000-5_CMakeCUDACompilerABI.cpp4.cu -dumpbase-ext .cu]
+        ignore line: [ignoring nonexistent directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/include"]
+        ignore line: [ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++"]
+        ignore line: [ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/x86_64-conda-linux-gnu"]
+        ignore line: [ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/backward"]
+        ignore line: [ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include"]
+        ignore line: [ignoring nonexistent directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/local/cuda/bin/../targets/x86_64-linux/include]
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++]
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/x86_64-conda-linux-gnu]
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/backward]
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include]
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include-fixed]
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/include]
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/include]
+        ignore line: [End of search list.]
+        ignore line: [COMPILER_PATH=/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/:/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/bin/]
+        ignore line: [LIBRARY_PATH=/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib/../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib/../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH_LIST__=520' '-E' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/usr/local/cuda/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=2' '-D' '__CUDACC_VER_BUILD__=91' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=2' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_0027399e_00000000-5_CMakeCUDACompilerABI.cpp4.ii' '-mtune=generic' '-march=x86-64' '-dumpdir' '/tmp/tmpxft_0027399e_00000000-5_CMakeCUDACompilerABI.cpp4.']
+        ignore line: [Reading specs from /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/specs]
+        ignore line: [Reading specs from /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/conda.specs]
+        ignore line: [COLLECT_GCC=gcc]
+        ignore line: [Target: x86_64-conda-linux-gnu]
+        ignore line: [Configured with: ../configure --prefix=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho --with-slibdir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib --libdir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib --mandir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/man --build=x86_64-conda-linux-gnu --host=x86_64-conda-linux-gnu --target=x86_64-conda-linux-gnu --enable-languages=c c++ fortran objc obj-c++ --enable-__cxa_atexit --disable-libmudflap --enable-libgomp --disable-libssp --enable-libquadmath --enable-libquadmath-support --enable-lto --enable-target-optspace --enable-plugin --enable-gold --disable-nls --disable-bootstrap --disable-multilib --enable-long-long --with-sysroot=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/x86_64-conda-linux-gnu/sysroot --with-build-sysroot=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/work/cf-compilers/x86_64-conda-linux-gnu/sysroot --with-native-system-header-dir=/usr/include --with-gxx-include-dir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++ --with-pkgversion='conda-forge gcc 12.4.0-2' --with-bugurl=https://github.com/conda-forge/ctng-compilers-feedstock/issues/new/choose --enable-libsanitizer --enable-default-pie --enable-threads=posix]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 12.4.0 (conda-forge gcc 12.4.0-2) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/usr/local/cuda/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_951b1.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_951b1.dir/']
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/cc1plus -quiet -v -I /usr/local/cuda/bin/../targets/x86_64-linux/include -iprefix /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/ -isysroot /home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot -D_GNU_SOURCE -D __CUDA_ARCH__=520 -D __CUDA_ARCH_LIST__=520 -D CUDA_DOUBLE_MATH_FUNCTIONS /tmp/tmpxft_0027399e_00000000-6_CMakeCUDACompilerABI.cudafe1.cpp -quiet -dumpdir CMakeFiles/cmTC_951b1.dir/ -dumpbase CMakeCUDACompilerABI.cu.cpp -dumpbase-ext .cpp -m64 -mtune=generic -march=x86-64 -version -idirafter /home/hongbin/anaconda3/envs/cudf_test/include -o /tmp/ccRvgmpm.s]
+        ignore line: [GNU C++17 (conda-forge gcc 12.4.0-2) version 12.4.0 (x86_64-conda-linux-gnu)]
+        ignore line: [	compiled by GNU C version 14.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/include"]
+        ignore line: [ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++"]
+        ignore line: [ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/x86_64-conda-linux-gnu"]
+        ignore line: [ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/backward"]
+        ignore line: [ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include"]
+        ignore line: [ignoring nonexistent directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/../../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/local/cuda/bin/../targets/x86_64-linux/include]
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++]
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/x86_64-conda-linux-gnu]
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++/backward]
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include]
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/include-fixed]
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/include]
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++17 (conda-forge gcc 12.4.0-2) version 12.4.0 (x86_64-conda-linux-gnu)]
+        ignore line: [	compiled by GNU C version 14.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: f31f47052c9fa5fea1ea8ad81798a5ce]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/usr/local/cuda/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_951b1.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_951b1.dir/']
+        ignore line: [ /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/bin/as -v -I /usr/local/cuda/bin/../targets/x86_64-linux/include --64 -o CMakeFiles/cmTC_951b1.dir/CMakeCUDACompilerABI.cu.o /tmp/ccRvgmpm.s]
+        ignore line: [GNU assembler version 2.44 (x86_64-conda-linux-gnu) using BFD version (GNU Binutils) 2.44]
+        ignore line: [COMPILER_PATH=/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/:/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/bin/]
+        ignore line: [LIBRARY_PATH=/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib/../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib/../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/usr/local/cuda/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_951b1.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_951b1.dir/CMakeCUDACompilerABI.cu.']
+        ignore line: [Linking CUDA executable cmTC_951b1]
+        ignore line: [/home/hongbin/develop/cmake-3.31.5-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_951b1.dir/link.txt --verbose=1]
+        ignore line: [Reading specs from /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/specs]
+        ignore line: [Reading specs from /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/conda.specs]
+        ignore line: [COLLECT_GCC=/home/hongbin/anaconda3/envs/cudf_test/bin/g++]
+        ignore line: [COLLECT_LTO_WRAPPER=/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/lto-wrapper]
+        ignore line: [Target: x86_64-conda-linux-gnu]
+        ignore line: [Configured with: ../configure --prefix=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho --with-slibdir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib --libdir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib --mandir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/man --build=x86_64-conda-linux-gnu --host=x86_64-conda-linux-gnu --target=x86_64-conda-linux-gnu --enable-languages=c c++ fortran objc obj-c++ --enable-__cxa_atexit --disable-libmudflap --enable-libgomp --disable-libssp --enable-libquadmath --enable-libquadmath-support --enable-lto --enable-target-optspace --enable-plugin --enable-gold --disable-nls --disable-bootstrap --disable-multilib --enable-long-long --with-sysroot=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/x86_64-conda-linux-gnu/sysroot --with-build-sysroot=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/work/cf-compilers/x86_64-conda-linux-gnu/sysroot --with-native-system-header-dir=/usr/include --with-gxx-include-dir=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238121525/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib/gcc/x86_64-conda-linux-gnu/12.4.0/include/c++ --with-pkgversion='conda-forge gcc 12.4.0-2' --with-bugurl=https://github.com/conda-forge/ctng-compilers-feedstock/issues/new/choose --enable-libsanitizer --enable-default-pie --enable-threads=posix]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 12.4.0 (conda-forge gcc 12.4.0-2) ]
+        ignore line: [COMPILER_PATH=/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/:/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/bin/]
+        ignore line: [LIBRARY_PATH=/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib/../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib/../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib/:/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-L/home/hongbin/anaconda3/envs/cudf_test/lib' '-v' '-o' 'cmTC_951b1' '-L/usr/local/cuda/targets/x86_64-linux/lib/stubs' '-L/usr/local/cuda/targets/x86_64-linux/lib' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_951b1.']
+        link line: [ /home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/collect2 -disable-new-dtags -plugin /home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/liblto_plugin.so -plugin-opt=/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cctfRjbF.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_951b1 /home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/Scrt1.o /home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/crti.o /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/crtbeginS.o -L/home/hongbin/anaconda3/envs/cudf_test/lib -L/usr/local/cuda/targets/x86_64-linux/lib/stubs -L/usr/local/cuda/targets/x86_64-linux/lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0 -L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc -L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib/../lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib/../lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../.. -L/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib -O2 --sort-common --as-needed -z relro -z now --disable-new-dtags --gc-sections --allow-shlib-undefined -rpath /home/hongbin/anaconda3/envs/cudf_test/lib -rpath-link /home/hongbin/anaconda3/envs/cudf_test/lib -v CMakeFiles/cmTC_951b1.dir/CMakeCUDACompilerABI.cu.o -lcudadevrt -lcudart_static -lrt -lpthread -ldl -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/crtendS.o /home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/crtn.o -rpath /home/hongbin/anaconda3/envs/cudf_test/lib -rpath-link /home/hongbin/anaconda3/envs/cudf_test/lib -L /home/hongbin/anaconda3/envs/cudf_test/lib/stubs -L /home/hongbin/anaconda3/envs/cudf_test/lib]
+          arg [/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/collect2] ==> ignore
+          arg [-disable-new-dtags] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cctfRjbF.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--sysroot=/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_951b1] ==> ignore
+          arg [/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/Scrt1.o] ==> obj [/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/Scrt1.o]
+          arg [/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/crti.o] ==> obj [/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/crti.o]
+          arg [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/crtbeginS.o] ==> obj [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/crtbeginS.o]
+          arg [-L/home/hongbin/anaconda3/envs/cudf_test/lib] ==> dir [/home/hongbin/anaconda3/envs/cudf_test/lib]
+          arg [-L/usr/local/cuda/targets/x86_64-linux/lib/stubs] ==> dir [/usr/local/cuda/targets/x86_64-linux/lib/stubs]
+          arg [-L/usr/local/cuda/targets/x86_64-linux/lib] ==> dir [/usr/local/cuda/targets/x86_64-linux/lib]
+          arg [-L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0] ==> dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0]
+          arg [-L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc] ==> dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc]
+          arg [-L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib/../lib] ==> dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib/../lib]
+          arg [-L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../lib] ==> dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../lib]
+          arg [-L/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib/../lib] ==> dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib/../lib]
+          arg [-L/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib] ==> dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib]
+          arg [-L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib] ==> dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib]
+          arg [-L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../..] ==> dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../..]
+          arg [-L/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib] ==> dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib]
+          arg [-L/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib] ==> dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib]
+          arg [-O2] ==> ignore
+          arg [--sort-common] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-znow] ==> ignore
+          arg [--disable-new-dtags] ==> ignore
+          arg [--gc-sections] ==> ignore
+          arg [--allow-shlib-undefined] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/home/hongbin/anaconda3/envs/cudf_test/lib] ==> ignore
+          arg [-rpath-link] ==> ignore
+          arg [/home/hongbin/anaconda3/envs/cudf_test/lib] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_951b1.dir/CMakeCUDACompilerABI.cu.o] ==> ignore
+          arg [-lcudadevrt] ==> lib [cudadevrt]
+          arg [-lcudart_static] ==> lib [cudart_static]
+          arg [-lrt] ==> lib [rt]
+          arg [-lpthread] ==> lib [pthread]
+          arg [-ldl] ==> lib [dl]
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/crtendS.o] ==> obj [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/crtendS.o]
+          arg [/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/crtn.o] ==> obj [/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/crtn.o]
+          arg [-rpath] ==> ignore
+          arg [/home/hongbin/anaconda3/envs/cudf_test/lib] ==> ignore
+          arg [-rpath-link] ==> ignore
+          arg [/home/hongbin/anaconda3/envs/cudf_test/lib] ==> ignore
+          arg [-L/home/hongbin/anaconda3/envs/cudf_test/lib/stubs] ==> dir [/home/hongbin/anaconda3/envs/cudf_test/lib/stubs]
+          arg [-L/home/hongbin/anaconda3/envs/cudf_test/lib] ==> dir [/home/hongbin/anaconda3/envs/cudf_test/lib]
+        ignore line: [collect2 version 12.4.0]
+        ignore line: [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/bin/ld -disable-new-dtags -plugin /home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/liblto_plugin.so -plugin-opt=/home/hongbin/anaconda3/envs/cudf_test/bin/../libexec/gcc/x86_64-conda-linux-gnu/12.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cctfRjbF.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_951b1 /home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/Scrt1.o /home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/crti.o /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/crtbeginS.o -L/home/hongbin/anaconda3/envs/cudf_test/lib -L/usr/local/cuda/targets/x86_64-linux/lib/stubs -L/usr/local/cuda/targets/x86_64-linux/lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0 -L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc -L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib/../lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib/../lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../.. -L/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib -L/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib -O2 --sort-common --as-needed -z relro -z now --disable-new-dtags --gc-sections --allow-shlib-undefined -rpath /home/hongbin/anaconda3/envs/cudf_test/lib -rpath-link /home/hongbin/anaconda3/envs/cudf_test/lib -v CMakeFiles/cmTC_951b1.dir/CMakeCUDACompilerABI.cu.o -lcudadevrt -lcudart_static -lrt -lpthread -ldl -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/crtendS.o /home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/crtn.o -rpath /home/hongbin/anaconda3/envs/cudf_test/lib -rpath-link /home/hongbin/anaconda3/envs/cudf_test/lib -L /home/hongbin/anaconda3/envs/cudf_test/lib/stubs -L /home/hongbin/anaconda3/envs/cudf_test/lib]
+        linker tool for 'CUDA': /home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/bin/ld
+        collapse obj [/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/Scrt1.o] ==> [/home/hongbin/anaconda3/envs/cudf_test/x86_64-conda-linux-gnu/sysroot/usr/lib/Scrt1.o]
+        collapse obj [/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/crti.o] ==> [/home/hongbin/anaconda3/envs/cudf_test/x86_64-conda-linux-gnu/sysroot/usr/lib/crti.o]
+        collapse obj [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/crtbeginS.o] ==> [/home/hongbin/anaconda3/envs/cudf_test/lib/gcc/x86_64-conda-linux-gnu/12.4.0/crtbeginS.o]
+        collapse obj [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/crtendS.o] ==> [/home/hongbin/anaconda3/envs/cudf_test/lib/gcc/x86_64-conda-linux-gnu/12.4.0/crtendS.o]
+        collapse obj [/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/crtn.o] ==> [/home/hongbin/anaconda3/envs/cudf_test/x86_64-conda-linux-gnu/sysroot/usr/lib/crtn.o]
+        collapse library dir [/home/hongbin/anaconda3/envs/cudf_test/lib] ==> [/home/hongbin/anaconda3/envs/cudf_test/lib]
+        collapse library dir [/usr/local/cuda/targets/x86_64-linux/lib/stubs] ==> [/usr/local/cuda/targets/x86_64-linux/lib/stubs]
+        collapse library dir [/usr/local/cuda/targets/x86_64-linux/lib] ==> [/usr/local/cuda/targets/x86_64-linux/lib]
+        collapse library dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0] ==> [/home/hongbin/anaconda3/envs/cudf_test/lib/gcc/x86_64-conda-linux-gnu/12.4.0]
+        collapse library dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc] ==> [/home/hongbin/anaconda3/envs/cudf_test/lib/gcc]
+        collapse library dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib/../lib] ==> [/home/hongbin/anaconda3/envs/cudf_test/x86_64-conda-linux-gnu/lib]
+        collapse library dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../lib] ==> [/home/hongbin/anaconda3/envs/cudf_test/lib]
+        collapse library dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib/../lib] ==> [/home/hongbin/anaconda3/envs/cudf_test/x86_64-conda-linux-gnu/sysroot/lib]
+        collapse library dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib] ==> [/home/hongbin/anaconda3/envs/cudf_test/x86_64-conda-linux-gnu/sysroot/usr/lib]
+        collapse library dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/lib] ==> [/home/hongbin/anaconda3/envs/cudf_test/x86_64-conda-linux-gnu/lib]
+        collapse library dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../..] ==> [/home/hongbin/anaconda3/envs/cudf_test/lib]
+        collapse library dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/lib] ==> [/home/hongbin/anaconda3/envs/cudf_test/x86_64-conda-linux-gnu/sysroot/lib]
+        collapse library dir [/home/hongbin/anaconda3/envs/cudf_test/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib] ==> [/home/hongbin/anaconda3/envs/cudf_test/x86_64-conda-linux-gnu/sysroot/usr/lib]
+        collapse library dir [/home/hongbin/anaconda3/envs/cudf_test/lib/stubs] ==> [/home/hongbin/anaconda3/envs/cudf_test/lib/stubs]
+        collapse library dir [/home/hongbin/anaconda3/envs/cudf_test/lib] ==> [/home/hongbin/anaconda3/envs/cudf_test/lib]
+        implicit libs: [cudadevrt;cudart_static;rt;pthread;dl;stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/home/hongbin/anaconda3/envs/cudf_test/x86_64-conda-linux-gnu/sysroot/usr/lib/Scrt1.o;/home/hongbin/anaconda3/envs/cudf_test/x86_64-conda-linux-gnu/sysroot/usr/lib/crti.o;/home/hongbin/anaconda3/envs/cudf_test/lib/gcc/x86_64-conda-linux-gnu/12.4.0/crtbeginS.o;/home/hongbin/anaconda3/envs/cudf_test/lib/gcc/x86_64-conda-linux-gnu/12.4.0/crtendS.o;/home/hongbin/anaconda3/envs/cudf_test/x86_64-conda-linux-gnu/sysroot/usr/lib/crtn.o]
+        implicit dirs: [/home/hongbin/anaconda3/envs/cudf_test/lib;/usr/local/cuda/targets/x86_64-linux/lib/stubs;/usr/local/cuda/targets/x86_64-linux/lib;/home/hongbin/anaconda3/envs/cudf_test/lib/gcc/x86_64-conda-linux-gnu/12.4.0;/home/hongbin/anaconda3/envs/cudf_test/lib/gcc;/home/hongbin/anaconda3/envs/cudf_test/x86_64-conda-linux-gnu/lib;/home/hongbin/anaconda3/envs/cudf_test/x86_64-conda-linux-gnu/sysroot/lib;/home/hongbin/anaconda3/envs/cudf_test/x86_64-conda-linux-gnu/sysroot/usr/lib;/home/hongbin/anaconda3/envs/cudf_test/lib/stubs]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CUDA compiler's linker: "/home/hongbin/anaconda3/envs/cudf_test/bin/../lib/gcc/x86_64-conda-linux-gnu/12.4.0/../../../../x86_64-conda-linux-gnu/bin/ld" "-v"
+      GNU ld (GNU Binutils) 2.44
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/CheckCXXSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/FindThreads.cmake:99 (CHECK_CXX_SOURCE_COMPILES)"
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/home/hongbin/develop/cmake-3.31.5-linux-x86_64/share/cmake-3.31/Modules/FindCUDAToolkit.cmake:1207 (find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/hongbin/code/testCUDF/build/CMakeFiles/CMakeScratch/TryCompile-oYLN8V"
+      binary: "/home/hongbin/code/testCUDF/build/CMakeFiles/CMakeScratch/TryCompile-oYLN8V"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: "-fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/hongbin/anaconda3/envs/cudf_test/include"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/home/hongbin/anaconda3/envs/cudf_test/lib -Wl,-rpath-link,/home/hongbin/anaconda3/envs/cudf_test/lib -L/home/hongbin/anaconda3/envs/cudf_test/lib"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/hongbin/code/testCUDF/build/CMakeFiles/CMakeScratch/TryCompile-oYLN8V'
+        
+        Run Build Command(s): /home/hongbin/develop/cmake-3.31.5-linux-x86_64/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6546e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_6546e.dir/build.make CMakeFiles/cmTC_6546e.dir/build
+        gmake[1]: Entering directory '/home/hongbin/code/testCUDF/build/CMakeFiles/CMakeScratch/TryCompile-oYLN8V'
+        Building CXX object CMakeFiles/cmTC_6546e.dir/src.cxx.o
+        /home/hongbin/anaconda3/envs/cudf_test/bin/x86_64-conda-linux-gnu-g++ -DCMAKE_HAVE_LIBC_PTHREAD  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/hongbin/anaconda3/envs/cudf_test/include  -std=gnu++20 -o CMakeFiles/cmTC_6546e.dir/src.cxx.o -c /home/hongbin/code/testCUDF/build/CMakeFiles/CMakeScratch/TryCompile-oYLN8V/src.cxx
+        Linking CXX executable cmTC_6546e
+        /home/hongbin/develop/cmake-3.31.5-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6546e.dir/link.txt --verbose=1
+        /home/hongbin/anaconda3/envs/cudf_test/bin/x86_64-conda-linux-gnu-g++ -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/hongbin/anaconda3/envs/cudf_test/include  -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/home/hongbin/anaconda3/envs/cudf_test/lib -Wl,-rpath-link,/home/hongbin/anaconda3/envs/cudf_test/lib -L/home/hongbin/anaconda3/envs/cudf_test/lib  CMakeFiles/cmTC_6546e.dir/src.cxx.o -o cmTC_6546e
+        gmake[1]: Leaving directory '/home/hongbin/code/testCUDF/build/CMakeFiles/CMakeScratch/TryCompile-oYLN8V'
+        
+      exitCode: 0
+...
