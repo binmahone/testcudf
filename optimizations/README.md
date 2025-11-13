@@ -1,6 +1,6 @@
 # CUDF Coalesce Performance Optimizations
 
-Optimized implementations for two common SQL coalesce expressions achieving **~23% performance improvement**.
+Optimized implementations for two common SQL coalesce expressions achieving **23% (single-thread) to 34-61% (multi-thread with mutex) performance improvement**.
 
 ---
 
@@ -80,19 +80,64 @@ Test configuration: 100 columns/pairs, ~1GB INT32 input, ~2GB FLOAT64 output.
 
 **Workload 1**:
 
-| Version | 4-thread Time | Speedup vs Original |
-|---------|---------------|---------------------|
-| Original (3 kernels) | 65.18 ms | baseline |
-| Optimized (2 kernels) | **49.86 ms** | **+23.5% faster** |
+| Version | 4-thread Time | Speedup |
+|---------|---------------|---------|
+| Original (3 kernels, concurrent) | 65.18 ms | baseline |
+| Optimized (2 kernels, concurrent) | 49.86 ms | +23.5% |
+| **Optimized + mutex** | **25.55 ms** | **+60.8%** ⭐ |
 
 **Workload 2**:
 
-| Version | 4-thread Time | Speedup vs Original |
-|---------|---------------|---------------------|
-| Original (5 kernels) | 101.80 ms | baseline |
-| Optimized (3 kernels) | **77.64 ms** | **+23.7% faster** |
+| Version | 4-thread Time | Speedup |
+|---------|---------------|---------|
+| Original (5 kernels, concurrent) | 101.80 ms | baseline |
+| Optimized (3 kernels, concurrent) | 77.64 ms | +23.7% |
+| **Optimized + mutex** | **66.77 ms** | **+34.4%** ⭐ |
 
-**Key Finding**: Optimizations provide **~23% speedup even in multi-threading**, where kernel submission bottleneck exists. Reducing kernel count helps mitigate the bottleneck.
+**Why mutex?** 
+
+Without mutex, 4 threads show **negative parallel efficiency**:
+- Single-thread baseline: 13.84 ms
+- 4-thread concurrent: 77.64 ms  
+- Expected (4× sequential): 4 × 13.84 = 55.36 ms
+- Result: **40% slower** than running threads sequentially!
+
+This indicates severe kernel submission contention. By introducing mutex to serialize kernel submission (while still using separate streams for execution), we:
+1. Eliminate submission contention
+2. Allow GPU to execute work in parallel on different streams
+3. Achieve 66.77 ms - much closer to ideal
+
+***Mutex implementation**: See `kernel_submission_test.cpp` for complete example with `std::lock_guard<std::mutex>` protecting the kernel submission loop.
+
+**Mutex serialization breakdown**:
+- Workload 1: 49.86ms → 25.55ms (mutex adds +48.8% improvement)
+- Workload 2: 77.64ms → 66.77ms (mutex adds +14.0% improvement)
+
+**Key Finding**: In multi-threading, **serialize kernel submission with mutex** to avoid contention. Combined with kernel optimizations, achieves:
+- Workload 1: **60.8% total speedup** (23.5% from kernels + 48.8% from mutex)
+- Workload 2: **34.4% total speedup** (23.7% from kernels + 14.0% from mutex)
+
+---
+
+## Multi-threading: Mutex Serialization
+
+For multi-threaded applications, serialize kernel submission to avoid contention:
+
+```cpp
+std::mutex kernel_submit_mutex;
+
+// In worker thread:
+{
+    std::lock_guard<std::mutex> lock(kernel_submit_mutex);
+    // Submit all kernels for this thread's work
+    for (auto& col : my_columns) {
+        auto result = process(col, stream);
+    }
+}
+stream.synchronize();
+```
+
+This prevents multiple threads from submitting kernels concurrently, avoiding GPU command queue contention.
 
 ---
 
@@ -168,10 +213,11 @@ conda install -n cudf_test \
 
 ## Key Takeaways
 
-1. ✅ **Use `replace_nulls` instead of `is_valid + copy_if_else`** → ~23% faster
+1. ✅ **Use `replace_nulls` instead of `is_valid + copy_if_else`** → ~23% faster (single-thread)
 2. ✅ **Simplify logic mathematically** (e.g., IF(y=1,x,0) = x*y) → Fewer kernels
 3. ✅ **Always use RMM pool_memory_resource** → Stable performance
-4. ✅ **Reduce kernel count** → Helps both single and multi-threading
+4. ✅ **In multi-threading, serialize kernel submission with mutex** → Essential for avoiding contention
+5. ✅ **Combined optimization (kernels + mutex)** → **34-61% total speedup** in multi-threading (4 threads)
 
 ---
 

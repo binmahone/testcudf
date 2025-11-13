@@ -23,9 +23,15 @@ echo "----------------------------------------"
 echo ""
 echo ""
 
-echo "[3/3] Multi-threading: 1 vs 4 threads"
+echo "[3/4] Multi-threading: 1 vs 4 threads"
 echo "----------------------------------------"
 ./multithread_benchmark
+echo ""
+echo ""
+
+echo "[4/4] Kernel submission: Concurrent vs Mutex"
+echo "----------------------------------------"
+./kernel_submission_test
 echo ""
 
 echo "========================================"
