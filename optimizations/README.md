@@ -107,7 +107,7 @@ This indicates severe kernel submission contention. By introducing mutex to seri
 2. Allow GPU to execute work in parallel on different streams
 3. Achieve 66.77 ms - much closer to ideal
 
-***Mutex implementation**: See `kernel_submission_test.cpp` for complete example with `std::lock_guard<std::mutex>` protecting the kernel submission loop.
+***Mutex implementation***: See `kernel_submission_test.cpp` for complete example with `std::lock_guard<std::mutex>` protecting the kernel submission loop.
 
 **Mutex serialization breakdown**:
 - Workload 1: 49.86ms → 25.55ms (mutex adds +48.8% improvement)
