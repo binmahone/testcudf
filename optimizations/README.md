@@ -1,6 +1,6 @@
 # CUDF Coalesce Performance Optimizations
 
-Optimized implementations for two common SQL coalesce expressions achieving **22-40% performance improvement**.
+Optimized implementations for two common SQL coalesce expressions achieving **~23% performance improvement**.
 
 ---
 
@@ -16,7 +16,7 @@ Optimized implementations for two common SQL coalesce expressions achieving **22
 
 ## Optimization 1: CAST(COALESCE(x, 0) AS DOUBLE)
 
-### Original Implementation (3 kernels, 7.05 ms)
+### Original Implementation (3 kernels, 7.15 ms)
 
 ```cpp
 auto is_valid_mask = cudf::is_valid(x);
@@ -24,7 +24,7 @@ auto coalesced = cudf::copy_if_else(x, zero_column, is_valid_mask);
 auto result = cudf::cast(coalesced, FLOAT64);
 ```
 
-### Optimized Implementation (2 kernels, 5.49 ms, **+22.2% faster**)
+### Optimized Implementation (2 kernels, 5.51 ms, **+23% faster**)
 
 ```cpp
 cudf::numeric_scalar<int32_t> zero(0, true);
@@ -40,7 +40,7 @@ auto result = cudf::cast(coalesced, FLOAT64);
 
 Where `y` is a binary column (0 or 1).
 
-### Original Implementation (5 kernels, 17.57 ms)
+### Original Implementation (5 kernels, 17.59 ms)
 
 ```cpp
 auto x_is_valid = cudf::is_valid(x);
@@ -50,7 +50,7 @@ auto result_int = cudf::copy_if_else(x_coalesced, zero, y_eq_1);
 auto result = cudf::cast(result_int, FLOAT64);
 ```
 
-### Optimized Implementation (3 kernels, 13.74 ms, **+21.8% faster**)
+### Optimized Implementation (3 kernels, 13.84 ms, **+21% faster**)
 
 ```cpp
 cudf::numeric_scalar<int32_t> zero(0, true);
@@ -168,7 +168,7 @@ conda install -n cudf_test \
 
 ## Key Takeaways
 
-1. ✅ **Use `replace_nulls` instead of `is_valid + copy_if_else`** → 20-40% faster
+1. ✅ **Use `replace_nulls` instead of `is_valid + copy_if_else`** → ~23% faster
 2. ✅ **Simplify logic mathematically** (e.g., IF(y=1,x,0) = x*y) → Fewer kernels
 3. ✅ **Always use RMM pool_memory_resource** → Stable performance
 4. ✅ **Reduce kernel count** → Helps both single and multi-threading
