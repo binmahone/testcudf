@@ -145,7 +145,7 @@ Test configuration: 100 columns/pairs, ~1GB INT32 input, ~2GB FLOAT64 output.
 
 ### Multi-threaded Performance (4 threads, 100 items per thread)
 
-> **Note**: We also conducted comprehensive tests with 2, 3, and 4 threads. For detailed results across different thread counts, see [multithread_results.md](multithread_results.md).
+> **Note**: We also conducted comprehensive tests with 2, 3, and 4 threads. For detailed results across different thread counts, see [MULTITHREAD_RESULTS.md](MULTITHREAD_RESULTS.md).
 
 **Workload 1**:
 
