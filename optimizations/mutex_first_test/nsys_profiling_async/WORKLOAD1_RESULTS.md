@@ -36,23 +36,6 @@ Average:  58.89 ms
 | Average (all 3 runs) | 80.48 ms | 58.89 ms | **26.8% faster** |
 | Steady state (runs 2-3) | 56.31 ms | 43.16 ms | **23.3% faster** |
 
-## Comparison with Pool Memory Resource
-
-| Allocator | Concurrent Avg | Mutex Avg | Mutex Advantage |
-|-----------|----------------|-----------|-----------------|
-| **Pool Memory** | 72.59 ms | 64.55 ms | 11.1% faster |
-| **Async Memory** | 80.48 ms | 58.89 ms | 26.8% faster |
-
-### Key Observation
-
-**Async memory resource shows GREATER benefit from mutex protection!**
-
-- With pool: mutex is 11.1% faster
-- With async: mutex is 26.8% faster
-
-This suggests that **dynamic memory allocation amplifies the contention 
-problem** in concurrent mode, making mutex protection even more valuable.
-
 ## Detailed Analysis
 
 ### 1. Kernel Launch Performance
@@ -67,21 +50,11 @@ Concurrent (Async):
 Mutex (Async):
 - Average: 9,164.7 ns
 - Max:     14,394,101 ns (14.4 ms)
-
-vs Pool Memory:
-
-Concurrent (Pool):
-- Average: 7,685.0 ns
-- Max:     12,516,831 ns (12.5 ms)
-
-Mutex (Pool):
-- Average: 12,176.9 ns
-- Max:     25,384,808 ns (25.4 ms)
 ```
 
 **Observation:** 
-- Async + Concurrent has **5x worse average** launch time (38 µs vs 7.7 µs)
-- Async + Mutex has **better average** than Pool + Mutex (9.2 µs vs 12.2 µs)
+- Concurrent mode has significantly worse average launch time (38 µs vs 9.2 µs)
+- Mutex mode reduces maximum latency by 74% (from 55.2ms to 14.4ms)
 - Dynamic allocation in concurrent mode severely degrades launch performance
 
 ### 2. Memory Allocation Pattern
@@ -117,22 +90,12 @@ Concurrent (Async):
 Mutex (Async):
 - Total time: 38,120,572 ns (38 ms)
 - Average:    31,452.6 ns
-
-vs Pool Memory:
-
-Concurrent (Pool):
-- Total time: 621,286,635 ns (621 ms)
-- Average:    512,612.7 ns
-
-Mutex (Pool):
-- Total time: 40,784,345 ns (41 ms)
-- Average:    33,650.4 ns
 ```
 
 **Observation:**
-- Async has **slightly better** sync performance than pool in concurrent mode
-- Mutex mode benefits are similar for both allocators
-- **93% reduction** in sync overhead with mutex (both allocators)
+- **93% reduction** in sync overhead with mutex protection
+- Concurrent mode suffers from significant synchronization delays
+- Mutex mode achieves consistent, low-latency synchronization
 
 ### 4. GPU Kernel Execution
 
@@ -146,22 +109,12 @@ Concurrent (Async):
 Mutex (Async):
 - Total: 37,581,997 ns
 - Avg:   31,318.3 ns
-
-vs Pool Memory:
-
-Concurrent (Pool):
-- Total: 96,633,831 ns
-- Avg:   80,528.2 ns
-
-Mutex (Pool):
-- Total: 37,704,451 ns
-- Avg:   31,420.4 ns
 ```
 
 **Observation:**
-- Kernel execution times are **nearly identical** between pool and async
-- The real difference is in the **submission and allocation overhead**
-- Mutex provides **62% faster kernel execution** regardless of allocator
+- Mutex provides **62% faster kernel execution**
+- Concurrent mode suffers from increased kernel execution overhead
+- Serialization improves GPU utilization efficiency
 
 ### 5. System-Level Lock Contention
 
@@ -175,21 +128,11 @@ Concurrent (Async):
 Mutex (Async):
 - Total time: 322,362,751 ns (322 ms)
 - Calls:      9
-
-vs Pool Memory:
-
-Concurrent (Pool):
-- Total time: 128,555,234 ns (129 ms)
-- Calls:      79
-
-Mutex (Pool):
-- Total time: 377,920,699 ns (378 ms)
-- Calls:      9
 ```
 
 **Observation:**
-- Async + Concurrent: **2.4x more** internal lock calls than Pool (190 vs 79)
-- Dynamic allocation creates additional lock contention points
+- Concurrent mode triggers **190 internal lock calls**
+- Dynamic allocation creates multiple lock contention points
 - Explicit mutex (322ms) prevents 190 internal lock calls and their cascading effects
 
 ### 6. Memory Cleanup Overhead
@@ -205,7 +148,7 @@ Mutex:      321,134,945 ns (321 ms)
 - Memory pool cleanup is similar for both modes
 - This is done at program exit, not affecting main workload
 
-## Why Async Benefits More from Mutex
+## Why Async Memory Benefits from Mutex
 
 ### 1. Memory Allocation Contention
 
@@ -216,9 +159,10 @@ Dynamic allocation in concurrent mode creates multiple contention points:
 
 ### 2. Increased Lock Calls
 
-Async + Concurrent triggers **2.4x more** internal locks than Pool + Concurrent:
-- 190 vs 79 pthread_mutex_lock calls
-- Each lock represents a contention point
+Async concurrent mode triggers excessive internal lock contention:
+- 190 pthread_mutex_lock calls in concurrent mode
+- Only 9 calls with explicit mutex protection
+- Each internal lock represents a contention point
 
 ### 3. Cascading Delays
 
@@ -237,14 +181,6 @@ Mutex protection in async mode:
 
 ## Performance Breakdown
 
-### Pool Memory Results
-
-```
-Concurrent: 72.59 ms
-Mutex:      64.55 ms
-Speedup:    11.1%
-```
-
 ### Async Memory Results
 
 ```
@@ -253,42 +189,31 @@ Mutex:      58.89 ms
 Speedup:    26.8%
 ```
 
-### Why the Difference?
+### Why Mutex Helps
 
-1. **Pool Memory:** Pre-allocated, allocation is just a pointer bump
-   - Concurrent contention is limited to pool management
-   - Mutex helps but benefits are modest
-
-2. **Async Memory:** Dynamic allocation from CUDA driver
-   - Concurrent contention spans multiple driver layers
-   - Mutex eliminates multiple contention points
-   - **Greater benefit from serialization**
+**Async Memory:** Dynamic allocation from CUDA driver
+- Concurrent contention spans multiple driver layers
+- Mutex eliminates multiple contention points
+- Serialization prevents cascading allocation delays
+- **26.8% performance improvement from mutex protection**
 
 ## Recommendations
 
 ### When to Use Mutex + Async
 
 This combination is **particularly beneficial** when:
-1. Memory usage is unpredictable (can't pre-size pool)
+1. Memory usage is unpredictable
 2. Multi-threaded workload (4+ threads)
 3. High-frequency operations (100+ per thread)
-4. Memory allocation per operation
-
-### When to Use Mutex + Pool
-
-Pool is still preferred when:
-1. Memory usage is predictable
-2. Can afford to pre-allocate large pool
-3. Want most consistent performance
-4. Minimize interaction with CUDA driver
+4. Dynamic memory allocation per operation
 
 ### Universal Recommendation
 
-**Always use mutex protection** for multi-threaded CUDF workloads:
-- 11-27% performance improvement
-- Works with any memory allocator
-- Reduces contention at all levels
+**Always use mutex protection** for multi-threaded CUDF workloads with async memory:
+- 26.8% performance improvement
+- Reduces contention at all driver layers
 - More predictable execution
+- Prevents cascading allocation delays
 
 ## Generated Files
 
@@ -305,25 +230,23 @@ nsys_reports/mutex_mode.sqlite
 # Open in Nsight Systems GUI
 nsys-ui nsys_reports/concurrent_mode.nsys-rep
 nsys-ui nsys_reports/mutex_mode.nsys-rep
-
-# Compare with pool memory results
-nsys-ui ../nsys_profiling/nsys_reports/concurrent_mode.nsys-rep
-nsys-ui ../nsys_profiling/nsys_reports/mutex_mode.nsys-rep
 ```
 
 ## Conclusion
 
-The profiling data reveals that **async memory resource magnifies the 
-benefits of mutex protection**:
+The profiling data reveals that **async memory resource benefits significantly 
+from mutex protection**, achieving a **26.8% performance improvement**.
 
-- Pool memory: 11.1% improvement with mutex
-- Async memory: 26.8% improvement with mutex
+Dynamic memory allocation introduces multiple contention points across the 
+CUDA driver stack that mutex serialization effectively eliminates:
 
-This is because dynamic memory allocation introduces additional contention 
-points that mutex serialization effectively eliminates. The mutex-first 
-optimization is even more critical when using driver-managed memory.
+- Reduced internal lock contention (190 → 9 calls)
+- Faster kernel launches (38 µs → 9.2 µs average)
+- 93% reduction in synchronization overhead
+- 62% faster kernel execution
 
 **Key Insight:** The apparent "cost" of serialization (322ms of mutex 
 locking) prevents far greater costs from uncontrolled contention on memory 
-allocation and kernel launch paths.
+allocation and kernel launch paths. The mutex-first optimization is critical 
+when using driver-managed memory in multi-threaded environments.
 
