@@ -16,14 +16,6 @@ Compares three RMM memory resource types:
 - `memory_resource_test.cpp` - Main test: Predictable workload (with/without mutex)
 - `async_scenarios/` - Subdirectory with async-specific tests
 
-### Documentation
-- `FINAL_RECOMMENDATIONS.md` - **START HERE** - Complete decision guide
-- `FRAGMENTATION_ANSWER.md` - **NEW!** Does fragmentation degrade performance?
-- `ASYNC_SUMMARY.md` - **Quick Answer**: Where does Async excel?
-- `MEMORY_RESOURCE_COMPARISON.md` - Detailed metrics from main test
-- `async_scenarios/FRAGMENTATION_FINDINGS.md` - Detailed fragmentation test results
-- `async_scenarios/ASYNC_ADVANTAGES.md` - Deep dive: Why Async doesn't dominate
-
 ### Build
 - `CMakeLists.txt` - Build configuration
 - `build.sh` - Build script
