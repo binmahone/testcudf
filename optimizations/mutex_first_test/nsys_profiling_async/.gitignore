@@ -1,0 +1,12 @@
+# Build artifacts
+build/
+*.o
+*.so
+*.a
+
+
+
+# Executables
+concurrent_mode
+mutex_mode
+
