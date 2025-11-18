@@ -2,17 +2,29 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Data from test output
-strategy1_times = [190.242, 123.912, 124.523, 119.995, 120.202, 120.766, 
-                   122.390, 119.977, 120.093, 119.840, 120.433, 119.854, 
-                   120.480, 121.257, 120.317, 122.769, 120.208, 120.158, 
-                   120.884, 120.186, 121.047, 120.784, 119.602, 120.584, 
-                   120.104]
+# Data from test output (Latest run)
+strategy1_times = [105.842, 10.063, 10.084, 10.237, 10.305, 10.096, 10.088, 
+                   10.140, 10.117, 10.196, 10.125, 10.041, 10.072, 10.121, 
+                   10.219, 10.079, 9.986, 9.888, 9.904, 9.937, 9.913, 9.880, 
+                   9.899, 9.911, 10.002]
 
-strategy2_times = [19.758, 25.413, 26.491, 25.428, 26.739, 25.430, 26.597, 
-                   25.369, 26.337, 25.364, 26.481, 25.366, 26.484, 25.354, 
-                   26.584, 25.375, 63.341, 54.470, 57.007, 57.038, 50.217, 
-                   57.130, 39.991, 70.047, 54.523]
+strategy2_times = [22.505, 20.362, 20.456, 20.454, 20.387, 20.423, 20.474, 
+                   20.361, 20.439, 20.386, 20.374, 20.466, 20.445, 20.359, 
+                   20.475, 20.476, 20.589, 20.453, 20.356, 20.510, 20.369, 
+                   20.491, 20.676, 20.472, 20.501]
+
+concat_times = [5.949, 4.310, 4.302, 4.300, 4.296, 4.293, 4.300, 4.296, 4.299, 
+                4.296, 4.296, 4.297, 4.298, 4.302, 4.297, 4.298, 4.291, 4.297, 
+                4.297, 4.300, 4.294, 4.292, 4.299, 4.293, 4.309]
+
+coalesce_times = [16.061, 15.931, 16.036, 16.036, 15.970, 16.011, 16.053, 
+                  15.948, 16.018, 15.970, 15.958, 16.050, 16.031, 15.935, 
+                  16.059, 16.062, 16.179, 16.038, 15.939, 16.092, 15.957, 
+                  16.074, 16.257, 16.051, 16.071]
+
+split_times = [0.493, 0.121, 0.116, 0.117, 0.120, 0.118, 0.120, 0.116, 0.121, 
+               0.119, 0.118, 0.118, 0.115, 0.121, 0.118, 0.115, 0.118, 0.117, 
+               0.119, 0.118, 0.116, 0.124, 0.118, 0.126, 0.120]
 
 num_warmup = 5
 num_runs = 20
@@ -24,9 +36,18 @@ s1_timed = strategy1_times[num_warmup:]
 s2_warmup = strategy2_times[:num_warmup]
 s2_timed = strategy2_times[num_warmup:]
 
+concat_warmup = concat_times[:num_warmup]
+concat_timed = concat_times[num_warmup:]
+
+coalesce_warmup = coalesce_times[:num_warmup]
+coalesce_timed = coalesce_times[num_warmup:]
+
+split_warmup = split_times[:num_warmup]
+split_timed = split_times[num_warmup:]
+
 # Create figure with subplots
-fig, axes = plt.subplots(2, 2, figsize=(15, 10))
-fig.suptitle('CUDF Coalesce Performance Comparison (200 cols, 1GB)', 
+fig, axes = plt.subplots(3, 2, figsize=(15, 13))
+fig.suptitle('CUDF Coalesce Performance Comparison (100 cols, 1GB)', 
              fontsize=14, fontweight='bold')
 
 # Plot 1: Full timeline (warmup + timed)
@@ -94,6 +115,33 @@ ax4.set_title('Time Distribution Histogram')
 ax4.legend()
 ax4.grid(True, alpha=0.3, axis='y')
 
+# Plot 5: Strategy 2 Breakdown - Stacked Area
+ax5 = axes[2, 0]
+x_timed = list(range(1, num_runs + 1))
+ax5.stackplot(x_timed, concat_timed, coalesce_timed, split_timed,
+              labels=['Concat', 'Coalesce', 'Split'],
+              colors=['#ff9999', '#66b3ff', '#99ff99'], alpha=0.7)
+ax5.set_xlabel('Run Number')
+ax5.set_ylabel('Time (ms)')
+ax5.set_title('Strategy 2 Time Breakdown (Stacked)')
+ax5.legend(loc='upper right')
+ax5.grid(True, alpha=0.3)
+
+# Plot 6: Strategy 2 Breakdown - Pie Chart
+ax6 = axes[2, 1]
+avg_concat = np.mean(concat_timed)
+avg_coalesce = np.mean(coalesce_timed)
+avg_split = np.mean(split_timed)
+breakdown_values = [avg_concat, avg_coalesce, avg_split]
+breakdown_labels = [f'Concat\n{avg_concat:.2f}ms\n({avg_concat/np.sum(breakdown_values)*100:.1f}%)',
+                    f'Coalesce\n{avg_coalesce:.2f}ms\n({avg_coalesce/np.sum(breakdown_values)*100:.1f}%)',
+                    f'Split\n{avg_split:.2f}ms\n({avg_split/np.sum(breakdown_values)*100:.1f}%)']
+colors = ['#ff9999', '#66b3ff', '#99ff99']
+ax6.pie(breakdown_values, labels=breakdown_labels, colors=colors, autopct='',
+        startangle=90, textprops={'fontsize': 10})
+ax6.set_title('Strategy 2 Time Breakdown (Average)')
+ax6.axis('equal')
+
 plt.tight_layout()
 plt.savefig('/home/hongbin/code/testCUDF/coalesce_comparison.png', dpi=150)
 print("\nPlot saved to: /home/hongbin/code/testCUDF/coalesce_comparison.png")
@@ -118,7 +166,19 @@ print(f"  Max:    {np.max(s2_timed):.3f} ms")
 print(f"  StdDev: {np.std(s2_timed):.3f} ms")
 print(f"  CV:     {np.std(s2_timed)/np.mean(s2_timed)*100:.1f}%")
 
-print(f"\nSpeedup: {np.mean(s1_timed)/np.mean(s2_timed):.2f}x")
+print("\nStrategy 2 Time Breakdown (Average):")
+avg_concat = np.mean(concat_timed)
+avg_coalesce = np.mean(coalesce_timed)
+avg_split = np.mean(split_timed)
+avg_total = np.mean(s2_timed)
+print(f"  Concat:   {avg_concat:.3f} ms ({avg_concat/avg_total*100:.1f}%)")
+print(f"  Coalesce: {avg_coalesce:.3f} ms ({avg_coalesce/avg_total*100:.1f}%)")
+print(f"  Split:    {avg_split:.3f} ms ({avg_split/avg_total*100:.1f}%)")
+
+if np.mean(s1_timed) < np.mean(s2_timed):
+    print(f"\nSpeedup: Strategy 1 is {np.mean(s2_timed)/np.mean(s1_timed):.2f}x faster")
+else:
+    print(f"\nSpeedup: Strategy 2 is {np.mean(s1_timed)/np.mean(s2_timed):.2f}x faster")
 
 # Identify anomalies in Strategy 2
 mean_s2 = np.mean(s2_timed)

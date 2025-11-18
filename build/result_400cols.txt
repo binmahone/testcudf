@@ -1,0 +1,126 @@
+========================================
+Cast(Coalesce) Strategy Comparison
+  Workload: cast(coalesce(x, 0) as double)
+  (Using RMM Pool Memory Resource)
+========================================
+
+Configuration:
+  Input data: 1.00 GB (INT32)
+  Output data: 2.00 GB (DOUBLE)
+  Columns: 400
+  Rows/col: 671088
+  Warmup: 5
+  Runs: 20
+  RMM Pool: 2GB
+
+Generating data...
+Data ready.
+
+========================================
+Strategy 1: Individual cast(coalesce) (200 ops)
+========================================
+
+Warmup:
+  1: 108.335 ms
+  2: 17.902 ms
+  3: 17.646 ms
+  4: 17.654 ms
+  5: 17.633 ms
+
+Timed runs:
+  1: 17.615 ms
+  2: 17.772 ms
+  3: 17.671 ms
+  4: 17.649 ms
+  5: 17.566 ms
+  6: 17.375 ms
+  7: 17.023 ms
+  8: 17.279 ms
+  9: 17.304 ms
+  10: 17.291 ms
+  11: 17.308 ms
+  12: 17.316 ms
+  13: 17.130 ms
+  14: 17.502 ms
+  15: 17.285 ms
+  16: 17.363 ms
+  17: 17.291 ms
+  18: 17.310 ms
+  19: 17.250 ms
+  20: 17.475 ms
+
+========================================
+Strategy 2: Concat->Cast(Coalesce)->Split(view)
+========================================
+
+Warmup:
+  1: 21.585 ms (concat:5.013 coalesce:16.066 split:0.506)
+  2: 20.862 ms (concat:4.700 coalesce:16.034 split:0.126)
+  3: 20.823 ms (concat:4.680 coalesce:16.018 split:0.124)
+  4: 20.807 ms (concat:4.682 coalesce:16.000 split:0.123)
+  5: 20.872 ms (concat:4.685 coalesce:16.061 split:0.125)
+
+Timed runs:
+  1: 20.750 ms (concat:4.688 coalesce:15.935 split:0.127)
+  2: 20.990 ms (concat:4.682 coalesce:16.182 split:0.125)
+  3: 20.951 ms (concat:4.684 coalesce:16.142 split:0.124)
+  4: 20.742 ms (concat:4.680 coalesce:15.931 split:0.130)
+  5: 20.861 ms (concat:4.682 coalesce:16.043 split:0.135)
+  6: 20.788 ms (concat:4.693 coalesce:15.969 split:0.125)
+  7: 20.901 ms (concat:4.682 coalesce:16.094 split:0.124)
+  8: 20.774 ms (concat:4.685 coalesce:15.961 split:0.126)
+  9: 20.841 ms (concat:4.683 coalesce:16.028 split:0.129)
+  10: 20.765 ms (concat:4.689 coalesce:15.950 split:0.126)
+  11: 20.860 ms (concat:4.685 coalesce:16.050 split:0.123)
+  12: 20.835 ms (concat:4.684 coalesce:16.027 split:0.123)
+  13: 20.759 ms (concat:4.685 coalesce:15.949 split:0.124)
+  14: 20.858 ms (concat:4.688 coalesce:16.044 split:0.125)
+  15: 20.852 ms (concat:4.690 coalesce:16.036 split:0.125)
+  16: 20.841 ms (concat:4.686 coalesce:16.027 split:0.127)
+  17: 20.868 ms (concat:4.686 coalesce:16.051 split:0.129)
+  18: 20.817 ms (concat:4.684 coalesce:16.010 split:0.122)
+  19: 20.846 ms (concat:4.688 coalesce:16.033 split:0.124)
+  20: 21.117 ms (concat:4.692 coalesce:16.301 split:0.123)
+
+========================================
+Summary
+========================================
+
+Strategy 1 (Individual cast(coalesce)):
+  Avg: 17.389 ms
+  Min: 17.023 ms
+  Max: 17.772 ms
+  Std: 0.185 ms
+  CV:  1.1%
+
+Strategy 2 (Concat->Cast(Coalesce)->Split view):
+  Avg: 20.851 ms
+  Min: 20.742 ms
+  Max: 21.117 ms
+  Std: 0.087 ms
+  CV:  0.4%
+
+Strategy 2 Breakdown (Average):
+  Concat:   4.686 ms (22.5%)
+  Coalesce: 16.038 ms (76.9%)
+  Split:    0.126 ms (0.6%)
+
+Result: Strategy 1 is 1.20x faster!
+
+========================================
+Data for Plotting
+========================================
+
+NUM_COLUMNS = 400
+
+Strategy1_times = [108.335, 17.902, 17.646, 17.654, 17.633, 17.615, 17.772, 17.671, 17.649, 17.566, 17.375, 17.023, 17.279, 17.304, 17.291, 17.308, 17.316, 17.130, 17.502, 17.285, 17.363, 17.291, 17.310, 17.250, 17.475]
+
+Strategy2_times = [21.585, 20.862, 20.823, 20.807, 20.872, 20.750, 20.990, 20.951, 20.742, 20.861, 20.788, 20.901, 20.774, 20.841, 20.765, 20.860, 20.835, 20.759, 20.858, 20.852, 20.841, 20.868, 20.817, 20.846, 21.117]
+
+Concat_times = [5.013, 4.700, 4.680, 4.682, 4.685, 4.688, 4.682, 4.684, 4.680, 4.682, 4.693, 4.682, 4.685, 4.683, 4.689, 4.685, 4.684, 4.685, 4.688, 4.690, 4.686, 4.686, 4.684, 4.688, 4.692]
+
+Coalesce_times = [16.066, 16.034, 16.018, 16.000, 16.061, 15.935, 16.182, 16.142, 15.931, 16.043, 15.969, 16.094, 15.961, 16.028, 15.950, 16.050, 16.027, 15.949, 16.044, 16.036, 16.027, 16.051, 16.010, 16.033, 16.301]
+
+Split_times = [0.506, 0.126, 0.124, 0.123, 0.125, 0.127, 0.125, 0.124, 0.130, 0.135, 0.125, 0.124, 0.126, 0.129, 0.126, 0.123, 0.123, 0.124, 0.125, 0.125, 0.127, 0.129, 0.122, 0.124, 0.123]
+
+Done!

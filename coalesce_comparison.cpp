@@ -19,6 +19,7 @@
 #include <random>
 #include <algorithm>
 #include <cmath>
+#include <cstdlib>
 
 /**
  * Final comparison: Individual coalesce vs Concat->Coalesce->Split(view)
@@ -123,7 +124,7 @@ std::unique_ptr<cudf::column> coalesce_and_cast_column(
     return casted;
 }
 
-int main() {
+int main(int argc, char** argv) {
     // Use pool memory resource for stable performance
     rmm::mr::cuda_memory_resource cuda_mr;
     rmm::mr::pool_memory_resource<rmm::mr::cuda_memory_resource> pool_mr(
@@ -133,10 +134,20 @@ int main() {
     rmm::mr::set_current_device_resource(&pool_mr);
     
     constexpr size_t TOTAL_DATA_SIZE = 1073741824;  // 1GB
-    constexpr size_t NUM_COLUMNS = 100;
+    size_t NUM_COLUMNS = 100;  // Default
     constexpr double NULL_PROBABILITY = 0.2;
     constexpr size_t NUM_WARMUP = 5;
     constexpr size_t NUM_RUNS = 20;
+    
+    // Parse command line argument for number of columns
+    if (argc > 1) {
+        NUM_COLUMNS = std::atoi(argv[1]);
+        if (NUM_COLUMNS == 0) {
+            std::cerr << "Invalid number of columns: " << argv[1] 
+                      << std::endl;
+            return 1;
+        }
+    }
     
     size_t total_rows = TOTAL_DATA_SIZE / sizeof(int32_t);
     size_t rows_per_column = total_rows / NUM_COLUMNS;
@@ -243,45 +254,93 @@ int main() {
     
     std::vector<double> times_s2;
     times_s2.reserve(NUM_WARMUP + NUM_RUNS);
+    std::vector<double> concat_times;
+    std::vector<double> coalesce_times;
+    std::vector<double> split_times;
+    concat_times.reserve(NUM_WARMUP + NUM_RUNS);
+    coalesce_times.reserve(NUM_WARMUP + NUM_RUNS);
+    split_times.reserve(NUM_WARMUP + NUM_RUNS);
     
     // Warmup
     std::cout << "Warmup:" << std::endl;
     for (size_t i = 0; i < NUM_WARMUP; ++i) {
         auto start = std::chrono::high_resolution_clock::now();
+        
+        auto t1 = std::chrono::high_resolution_clock::now();
         auto concat_col = cudf::concatenate(column_views);
+        cudaDeviceSynchronize();
+        auto t2 = std::chrono::high_resolution_clock::now();
+        
         auto coalesced_and_casted = coalesce_and_cast_column(
             concat_col->view()
         );
+        cudaDeviceSynchronize();
+        auto t3 = std::chrono::high_resolution_clock::now();
+        
         auto split_result = cudf::split(coalesced_and_casted->view(), 
                                          split_indices);
         cudaDeviceSynchronize();
         auto end = std::chrono::high_resolution_clock::now();
-        auto dur = std::chrono::duration_cast<std::chrono::microseconds>(
-            end - start);
-        double t = dur.count() / 1000.0;
+        
+        double t_concat = std::chrono::duration_cast<std::chrono::microseconds>(
+            t2 - t1).count() / 1000.0;
+        double t_coalesce = std::chrono::duration_cast<std::chrono::microseconds>(
+            t3 - t2).count() / 1000.0;
+        double t_split = std::chrono::duration_cast<std::chrono::microseconds>(
+            end - t3).count() / 1000.0;
+        double t = std::chrono::duration_cast<std::chrono::microseconds>(
+            end - start).count() / 1000.0;
+        
         times_s2.push_back(t);
+        concat_times.push_back(t_concat);
+        coalesce_times.push_back(t_coalesce);
+        split_times.push_back(t_split);
+        
         std::cout << "  " << (i+1) << ": " << std::fixed 
-                  << std::setprecision(3) << t << " ms" << std::endl;
+                  << std::setprecision(3) << t << " ms "
+                  << "(concat:" << t_concat << " coalesce:" << t_coalesce 
+                  << " split:" << t_split << ")" << std::endl;
     }
     
     // Timed runs
     std::cout << std::endl << "Timed runs:" << std::endl;
     for (size_t i = 0; i < NUM_RUNS; ++i) {
         auto start = std::chrono::high_resolution_clock::now();
+        
+        auto t1 = std::chrono::high_resolution_clock::now();
         auto concat_col = cudf::concatenate(column_views);
+        cudaDeviceSynchronize();
+        auto t2 = std::chrono::high_resolution_clock::now();
+        
         auto coalesced_and_casted = coalesce_and_cast_column(
             concat_col->view()
         );
+        cudaDeviceSynchronize();
+        auto t3 = std::chrono::high_resolution_clock::now();
+        
         auto split_result = cudf::split(coalesced_and_casted->view(), 
                                          split_indices);
         cudaDeviceSynchronize();
         auto end = std::chrono::high_resolution_clock::now();
-        auto dur = std::chrono::duration_cast<std::chrono::microseconds>(
-            end - start);
-        double t = dur.count() / 1000.0;
+        
+        double t_concat = std::chrono::duration_cast<std::chrono::microseconds>(
+            t2 - t1).count() / 1000.0;
+        double t_coalesce = std::chrono::duration_cast<std::chrono::microseconds>(
+            t3 - t2).count() / 1000.0;
+        double t_split = std::chrono::duration_cast<std::chrono::microseconds>(
+            end - t3).count() / 1000.0;
+        double t = std::chrono::duration_cast<std::chrono::microseconds>(
+            end - start).count() / 1000.0;
+        
         times_s2.push_back(t);
+        concat_times.push_back(t_concat);
+        coalesce_times.push_back(t_coalesce);
+        split_times.push_back(t_split);
+        
         std::cout << "  " << (i+1) << ": " << std::fixed 
-                  << std::setprecision(3) << t << " ms" << std::endl;
+                  << std::setprecision(3) << t << " ms "
+                  << "(concat:" << t_concat << " coalesce:" << t_coalesce 
+                  << " split:" << t_split << ")" << std::endl;
     }
     
     // Calculate stats
@@ -333,6 +392,25 @@ int main() {
               << (std2/avg2*100) << "%" << std::endl;
     std::cout << std::endl;
     
+    auto [avg_concat, min_concat, max_concat, std_concat] = 
+        calc_stats(concat_times, NUM_WARMUP);
+    auto [avg_coalesce, min_coalesce, max_coalesce, std_coalesce] = 
+        calc_stats(coalesce_times, NUM_WARMUP);
+    auto [avg_split, min_split, max_split, std_split] = 
+        calc_stats(split_times, NUM_WARMUP);
+    
+    std::cout << "Strategy 2 Breakdown (Average):" << std::endl;
+    std::cout << "  Concat:   " << std::fixed << std::setprecision(3) 
+              << avg_concat << " ms (" << std::setprecision(1) 
+              << (avg_concat/avg2*100) << "%)" << std::endl;
+    std::cout << "  Coalesce: " << std::fixed << std::setprecision(3) 
+              << avg_coalesce << " ms (" << std::setprecision(1) 
+              << (avg_coalesce/avg2*100) << "%)" << std::endl;
+    std::cout << "  Split:    " << std::fixed << std::setprecision(3) 
+              << avg_split << " ms (" << std::setprecision(1) 
+              << (avg_split/avg2*100) << "%)" << std::endl;
+    std::cout << std::endl;
+    
     if (avg1 < avg2) {
         double speedup = avg2 / avg1;
         std::cout << "Result: Strategy 1 is " << std::fixed 
@@ -351,6 +429,9 @@ int main() {
     std::cout << "========================================" << std::endl;
     std::cout << std::endl;
     
+    std::cout << "NUM_COLUMNS = " << NUM_COLUMNS << std::endl;
+    std::cout << std::endl;
+    
     std::cout << "Strategy1_times = [";
     for (size_t i = 0; i < times_s1.size(); ++i) {
         if (i > 0) std::cout << ", ";
@@ -363,6 +444,30 @@ int main() {
     for (size_t i = 0; i < times_s2.size(); ++i) {
         if (i > 0) std::cout << ", ";
         std::cout << std::fixed << std::setprecision(3) << times_s2[i];
+    }
+    std::cout << "]" << std::endl;
+    std::cout << std::endl;
+    
+    std::cout << "Concat_times = [";
+    for (size_t i = 0; i < concat_times.size(); ++i) {
+        if (i > 0) std::cout << ", ";
+        std::cout << std::fixed << std::setprecision(3) << concat_times[i];
+    }
+    std::cout << "]" << std::endl;
+    std::cout << std::endl;
+    
+    std::cout << "Coalesce_times = [";
+    for (size_t i = 0; i < coalesce_times.size(); ++i) {
+        if (i > 0) std::cout << ", ";
+        std::cout << std::fixed << std::setprecision(3) << coalesce_times[i];
+    }
+    std::cout << "]" << std::endl;
+    std::cout << std::endl;
+    
+    std::cout << "Split_times = [";
+    for (size_t i = 0; i < split_times.size(); ++i) {
+        if (i > 0) std::cout << ", ";
+        std::cout << std::fixed << std::setprecision(3) << split_times[i];
     }
     std::cout << "]" << std::endl;
     
